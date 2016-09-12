@@ -1,0 +1,107 @@
+<!--
+    Fichero generado de manera automática a partir del documento compartido:
+    https://docs.google.com/spreadsheets/d/1rLrVXuOoog18uAno7vexNs_dvoIjPp4GxsN2S-AEcYM/edit
+    Fecha de generación: Fri Apr 17 2015 15:10:39 GMT+0200 (CEST)
+-->
+
+<!--
+    Idioma French
+-->
+<resources>
+
+
+    <!-- ======================================= -->
+    <!-- ===== ALFRED =====  -->
+
+
+    <!-- Translated -->
+
+    <string name="app_name">Alfredo Marché</string>
+
+
+    <!-- login -->
+
+    <string name="user">UTILISATEUR</string>
+    <string name="password">MOT DE PASSE</string>
+    <string name="enter">Se connecter</string>
+
+
+    <!-- menu -->
+
+    <string name="me">MON PROFIL</string>
+    <string name="home">ACCUEIL</string>
+    <string name="search">RECHERCHER</string>
+
+
+    <!-- home -->
+
+    <string name="latest">RÉCENT</string>
+    <string name="categories">CATÉGORIES</string>
+    <string name="myApps">MES APPLICATIONS</string>
+    <string name="update_app_title">MISE À JOUR</string>
+
+
+    <!-- profile -->
+
+    <string name="edit_profile">EDITER MON PROFIL</string>
+    <string name="name">NOM</string>
+    <string name="email">E-MAIL</string>
+
+
+    <!-- search -->
+
+    <string name="search_message_text">COMMENT PUIS-JE VOUS AIDER?</string>
+    <string name="tap_to_talk">TOUCHER L\'ÉCRAN POUR ME PARLER</string>
+    <string name="tap_to_write">TOUCHER L\'ÉCRAN POUR M\'ÉCRIRE</string>
+    <string name="search_bar">Rechercher</string>
+    <string name="cancel">ANNULER</string>
+    <string name="send">ENVOYER</string>
+    <string name="request_result">Résultats de la demande</string>
+
+
+    <!-- categories -->
+
+    <string name="games">JEUX</string>
+    <string name="sports">SPORTS</string>
+    <string name="medicine">MÉDECINE</string>
+    <string name="food">NUTRITION</string>
+    <string name="books">LIVRES</string>
+    <string name="travel">VOYAGES</string>
+
+
+    <!-- app detail -->
+
+    <string name="install">INSTALLER</string>
+    <string name="uninstall">DÉSINSTALLATION</string>
+    <string name="download">TÉLÉCHARGER</string>
+    <string name="version">VERSION:</string>
+    <string name="size">TAILLE:</string>
+    <string name="publication_date">DATE DE PUBLICATION:</string>
+    <string name="write_review">ÉCRIRE UN COMMENTAIRE</string>
+
+
+    <!-- review -->
+
+    <string name="describe_problem">ENVOYEZ VOTRE AVIS</string>
+    <string name="opinions">AVIS</string>
+
+
+    <!-- error message -->
+
+    <string name="ok">OK</string>
+    <string name="not_connection">Pas de connection internet disponible.</string>
+    <string name="no_internet">" nécessité d\'une connection internet fonctionnelle. Veuillez connecter votre appareil et réessayer\"</string>
+    <string name="unable_load">Impossible de télécharger les données de l\'application.\nVeuillez réessayer ultérieurement.\n\nSi le problem persiste, veuillez contacter votre administrateur.</string>
+    <string name="updatingApp">Mise à jour %s. Veuillez patienter.</string>
+    <string name="installError">Cette application ne peut être installée pour le moment, veuillez réessayer ultérieurement.</string>
+    <string name="not_apps">Aucune mise à jour disponible pour le moment</string>
+    <string name="install_app_title">Installer l\'application</string>
+    <string name="install_app_ask">Certains aspects de l\'application ne seront pas valides à cause de problèmes de géolocalisation. Voulez-vous continuer?</string>
+    <string name="not_install_apps">Aucune application installée pour le moment.</string>
+    <string name="update_app_ask">Voulez-vous mettre à jour cette application?</string>
+    <string name="not_found">Aucun résultat trouvé.</string>
+    <string name="server_error">Pas de réponse, veuillez réessayer.</string>
+    <string name="no_reviews">Aucune révision à montrer pour le moment.</string>
+    <string name="reconnecting">Reconnection…</string>
+    <string name="lost_session">Session interrompue</string>
+</resources>

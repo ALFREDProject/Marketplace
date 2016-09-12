@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="74.66dp" 
+        android:orientation="horizontal">"
+
+        <com.tempos21.market.ui.view.listApps.AppsModeView
+            android:id="@+id/appsModeView"
+            android:layout_width="104dp"
+            android:layout_height="38.66dp"
+            android:layout_marginTop="16.66dp" android:layout_marginBottom="18dp" android:layout_marginLeft="16.66dp">
+        </com.tempos21.market.ui.view.listApps.AppsModeView>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_small" android:layout_gravity="center" android:scaleType="fitEnd" android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sectionTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_categories"
+        android:gravity="center_vertical"
+        android:paddingLeft="36dp"
+        android:text="Categories"
+        android:textColor="@color/AtosBlue"
+        android:textSize="@dimen/TextBig"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tempos21.market.ui.view.listApps.ListAppsView
+            android:id="@+id/listAppsViews"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp" >
+        </com.tempos21.market.ui.view.listApps.ListAppsView>
+
+        <TextView
+            android:id="@+id/notConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="2"
+            android:text="@string/not_connection"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+</LinearLayout>

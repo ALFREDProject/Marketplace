@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:orientation="vertical" 
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="74.66dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="19.14dp"
+        android:scaleType="center"
+        android:src="@drawable/logo_small" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_categories"
+        android:gravity="center_vertical"
+        android:paddingLeft="36dp"
+        android:text="Categories"
+        android:textColor="@color/AtosBlue"
+        android:textSize="@dimen/TextBig"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ListView
+            android:id="@+id/categoriesList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="29.04dp"
+            android:layout_marginRight="18.48dp"
+            android:layout_weight="1"
+            android:cacheColorHint="#0000"
+            android:divider="#0000"
+            android:dividerHeight="0dp"
+            android:listSelector="@drawable/bg_list_down" >
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/categoryProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/notCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/not_categories"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

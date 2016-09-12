@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<dimen name="BannerHeight">89.33dp</dimen>
+	<dimen name="BannerWidth">274.66dp</dimen>
+	
+	<dimen name="IconHeight">80dp</dimen>
+	<dimen name="IconWidth">80dp</dimen>
+	
+	<dimen name="SmallIconHeight">40dp</dimen>
+	<dimen name="SmallIconWidth">40dp</dimen>
+	
+	    
+	<dimen name="MenuIconWidth">69.33dp</dimen>
+	<dimen name="MenuIconHeight">71.33dp</dimen>
+	
+	<dimen name="TextSmall">14sp</dimen>
+	<dimen name="TextNormal">18sp</dimen>
+	<dimen name="TextBig">22sp</dimen>
+	
+	<dimen name="StarsBig">17.33dp</dimen>
+	<dimen name="StarsSmall">11dp</dimen>
+
+    <dimen name="uninstall_button">22sp</dimen>
+    <dimen name="publication_date">22sp</dimen>
+    <dimen name="menu_icon_name">20sp</dimen>
+    <dimen name="cancel">22sp</dimen>
+
+</resources>

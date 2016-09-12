@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="100dp"
+    android:layout_height="120dp"
+    android:orientation="vertical"
+    android:background="@drawable/rectangle_shape"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appIcon"
+        android:src="@drawable/alfredo_splash"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ALFRED"
+        android:textColor="@android:color/black"
+        android:id="@+id/appTitle"
+        android:padding="10dp"
+        android:background="@color/White"
+        android:maxLines="1"
+        android:ellipsize="end" />
+</LinearLayout>

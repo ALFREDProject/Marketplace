@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="74.66dp"
+        android:layout_marginLeft="29.04dp"
+        android:layout_marginRight="17.82dp"
+        android:gravity="center" >
+
+        <ToggleButton
+            android:id="@+id/latest"
+            android:layout_width="137.33dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_latest"
+            android:checked="true"
+            android:gravity="center"
+            android:textColor="#006EAB"
+            android:textOff="@string/latest"
+            android:textOn="@string/latest"
+            android:textSize="17.16dp" />
+
+        <ToggleButton
+            android:id="@+id/ratings"
+            android:layout_width="137.33dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_ratings"
+            android:checked="false"
+            android:gravity="center"
+            android:textColor="#006EAB"
+            android:textOff="@string/ratings"
+            android:textOn="@string/ratings"
+            android:textSize="17.16dp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.84dp"
+            android:layout_marginTop="19.14dp"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/logo_small" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="29.04dp"
+        android:layout_marginRight="17.82dp"
+        android:layout_weight="1" >
+
+        <ProgressBar
+            android:id="@+id/homeProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <GridView
+            android:id="@+id/appsListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#0000"
+            android:divider="#0000"
+            android:dividerHeight="7.26dp"
+            android:listSelector="@drawable/background_tile"
+            android:numColumns="@integer/home_columns"
+            android:verticalSpacing="7.26dp" >
+        </GridView>
+
+        <TextView
+            android:id="@+id/homeNotFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/noAppsToShow" />
+
+    </RelativeLayout>
+
+</LinearLayout>

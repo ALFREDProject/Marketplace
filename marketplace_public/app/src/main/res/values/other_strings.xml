@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- not in use -->
+	<string name="ratings">Ratings</string>
+    <string name="updateAll">Update all</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="save_review">Save review</string>
+    <string name="report_body">Describe the problem here...</string>
+    <string name="report_subject">A problem occurred with %s</string>
+    <string name="noAppsToShow">At this moment there are no applications to show</string>
+    <string name="not_categories">At this moment there are no categories to show</string>
+    <string name="not_countries">At this moment there are no countries to show</string>
+    <string name="not_test">At this moment there are no applications to test</string>
+</resources>

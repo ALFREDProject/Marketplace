@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.tempos21.market.ui.view.FlingView
+        android:id="@+id/flingView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <FrameLayout
+                android:id="@+id/mainFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </FrameLayout>
+
+            <!--
+                <ScrollView
+                android:id="@+id/menuScroll"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" >
+            -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" >
+
+                <com.tempos21.market.ui.view.SlidingMenu
+                    android:id="@+id/slidingMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" >
+
+                    <com.tempos21.market.ui.view.MenuButtons
+                        android:id="@+id/menuButtons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent" >
+                    </com.tempos21.market.ui.view.MenuButtons>
+                </com.tempos21.market.ui.view.SlidingMenu>
+            </LinearLayout>
+            <!-- </ScrollView> -->
+        </RelativeLayout>
+    </com.tempos21.market.ui.view.FlingView>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<!--
+    Fichero generado de manera automática a partir del documento compartido:
+    https://docs.google.com/spreadsheets/d/1rLrVXuOoog18uAno7vexNs_dvoIjPp4GxsN2S-AEcYM/edit
+    Fecha de generación: Fri Apr 17 2015 14:47:46 GMT+0200 (CEST)
+-->
+
+<!--
+    Idioma German
+-->
+<resources>
+
+
+    <!-- ======================================= -->
+    <!-- ===== ALFRED =====  -->
+
+
+    <!-- Translated -->
+
+    <string name="app_name">Alfredo Markt</string>
+
+
+    <!-- login -->
+
+    <string name="user">BENUTZER</string>
+    <string name="password">PASSWORT</string>
+    <string name="enter">Einloggen</string>
+
+
+    <!-- menu -->
+
+    <string name="me">ICH</string>
+    <string name="home">STARTSEITE</string>
+    <string name="search">SUCHE</string>
+
+
+    <!-- home -->
+
+    <string name="latest">NEUIGKEITEN</string>
+    <string name="categories">KATEGORIEN</string>
+    <string name="myApps">MEINE APPS</string>
+    <string name="update_app_title">AKTUALISIERUNG</string>
+
+
+    <!-- profile -->
+
+    <string name="edit_profile">PROFIL BEARBEITEN</string>
+    <string name="name">NAME</string>
+    <string name="email">E-MAIL</string>
+
+
+    <!-- search -->
+
+    <string name="search_message_text">WIE KANN ICH IHNEN HELFEN?</string>
+    <string name="tap_to_talk">ANTIPPEN UM MIT MIR ZU SPRECHEN</string>
+    <string name="tap_to_write">ANTIPPEN UM MIR ZU SCHREIBEN</string>
+    <string name="search_bar">Suche</string>
+    <string name="cancel">RÜCKGÄNIG MACHEN</string>
+    <string name="send">SENDEN</string>
+    <string name="request_result">Ergebnis abfragen</string>
+
+
+    <!-- categories -->
+
+    <string name="games">SPIELE</string>
+    <string name="sports">SPORT</string>
+    <string name="medicine">GESUNDHEIT</string>
+    <string name="food">ERNÄHRUNG</string>
+    <string name="books">BÜCHER</string>
+    <string name="travel">REISEN</string>
+
+
+    <!-- app detail -->
+
+    <string name="install">INSTALLIEREN</string>
+    <string name="uninstall">DEINSTALLIEREN</string>
+    <string name="download">DOWNLOAD</string>
+    <string name="version">VERSION:</string>
+    <string name="size">GRÖSSE:</string>
+    <string name="publication_date">VERÖFFENTLICHUNGSDATUM:</string>
+    <string name="write_review">EINE BEWERTUNG SCHEIBEN</string>
+
+
+    <!-- review -->
+
+    <string name="describe_problem">SENDEN SIE IHR FEEDBACK</string>
+    <string name="opinions">FEEDBACK</string>
+
+
+    <!-- error message -->
+
+    <string name="ok">OK</string>
+    <string name="not_connection">Es besteht zurzeit keine Internetverbindung</string>
+    <string name="no_internet">"eine aktive Internetverbinung wird benötigt. Bitte verbinden Sie sich mit dem Internet und versuchen Sie es erneut\"</string>
+    <string name="unable_load">Die Anwendung kann nicht geladen werden. \nVersuchen Sie es bitte zu einem späteren Zeitpunkt. \n\nFalls das Problem weiterhin besteht, kontaktieren Sie bitte den Administrator</string>
+    <string name="updatingApp">Aktualisiere %s. Bitte warten.</string>
+    <string name="installError">Die Anwendung kann momentan nicht geladen werden, bitte versuchen Sie es später nocheinmal</string>
+    <string name="not_apps">Momentan gibt es keine Updates</string>
+    <string name="install_app_title">Installiere Anwendung</string>
+    <string name="install_app_ask">Einige Teile der Anwedung können wegen einem Fehler bei der Standortbestimmung ungenau sein. Wollen Sie trotzdem fortfahren?</string>
+    <string name="not_install_apps">Momentan sind keine Anwendungen installiert</string>
+    <string name="update_app_ask">Sind Sie sicher, dass Sie diese Anwendung installieren möchten?</string>
+    <string name="not_found">Es wurden keine Ergebnisse gefunden</string>
+    <string name="server_error">Es gibt keine Antwort. Versuchen Sie es erneut</string>
+    <string name="no_reviews">Momentan sind keine Bewertungen verfügbar.</string>
+    <string name="reconnecting">Erneuter Verbindungsaufbau…</string>
+    <string name="lost_session">Verbindungsfehler</string>
+</resources>

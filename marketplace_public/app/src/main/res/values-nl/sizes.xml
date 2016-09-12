@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="uninstall_button">22sp</dimen>
+    <dimen name="publication_date">22sp</dimen>
+    <dimen name="menu_icon_name">20sp</dimen>
+    <dimen name="cancel">22sp</dimen>
+
+</resources>

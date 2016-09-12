@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/searchTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="5dp"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:lines="1"
+            android:textSize="@dimen/TextBig"
+            android:textColor="@color/DarkGray"
+            android:textStyle="bold"
+            android:text="@string/search_message_text" />
+
+
+
+        <ImageView
+            android:id="@+id/microButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/micro_circle"/>
+
+        <TextView
+            android:id="@+id/microTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/tap_to_talk"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+
+        <ImageView
+            android:id="@+id/keyboardButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/btn_keyword_search"/>
+
+        <TextView
+            android:id="@+id/keyboardTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/tap_to_write"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/search_edit_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/gray"
+            android:padding="5dp"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="5dp"
+            android:hint="@string/search_bar"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:textSize="@dimen/TextBig" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/cancel"
+                android:id="@+id/cancel_button"
+                android:layout_weight="0.5"
+                android:padding="3dp"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/White"
+                android:textSize="@dimen/cancel"
+                android:background="@drawable/btn_cancel"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/send"
+                android:id="@+id/send_button"
+                android:layout_weight="0.5"
+                android:padding="10dp"
+                android:textSize="@dimen/TextBig"
+                android:textColor="@color/White"
+                android:background="@drawable/btn_enter"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
+
+
+
+

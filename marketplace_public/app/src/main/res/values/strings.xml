@@ -1,0 +1,107 @@
+<!--
+    Fichero generado de manera automática a partir del documento compartido:
+    https://docs.google.com/spreadsheets/d/1rLrVXuOoog18uAno7vexNs_dvoIjPp4GxsN2S-AEcYM/edit
+    Fecha de generación: Fri Apr 17 2015 14:47:46 GMT+0200 (CEST)
+-->
+
+<!--
+    Idioma English
+-->
+<resources>
+
+
+    <!-- ======================================= -->
+    <!-- ===== ALFRED =====  -->
+
+
+    <!-- Translated -->
+
+    <string name="app_name">Alfredo Market</string>
+
+
+    <!-- login -->
+
+    <string name="user">USER</string>
+    <string name="password">PASSWORD</string>
+    <string name="enter">Login</string>
+
+
+    <!-- menu -->
+
+    <string name="me">ME</string>
+    <string name="home">HOME</string>
+    <string name="search">SEARCH</string>
+
+
+    <!-- home -->
+
+    <string name="latest">LATEST</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="myApps">MY APPS</string>
+    <string name="update_app_title">UPDATE</string>
+
+
+    <!-- profile -->
+
+    <string name="edit_profile">EDIT PROFILE</string>
+    <string name="name">NAME</string>
+    <string name="email">E-MAIL</string>
+
+
+    <!-- search -->
+
+    <string name="search_message_text">WHAT CAN I HELP YOU?</string>
+    <string name="tap_to_talk">TAP TO TALK ME</string>
+    <string name="tap_to_write">TAP TO WRITE ME</string>
+    <string name="search_bar">Search</string>
+    <string name="cancel">CANCEL</string>
+    <string name="send">SEND</string>
+    <string name="request_result">Request result</string>
+
+
+    <!-- categories -->
+
+    <string name="games">GAMES</string>
+    <string name="sports">SPORTS</string>
+    <string name="medicine">MEDICINE</string>
+    <string name="food">FOOD</string>
+    <string name="books">BOOKS</string>
+    <string name="travel">TRAVEL</string>
+
+
+    <!-- app detail -->
+
+    <string name="install">INSTALL</string>
+    <string name="uninstall">UNINSTALL</string>
+    <string name="download">DOWNLOAD</string>
+    <string name="version">VERSION:</string>
+    <string name="size">SIZE:</string>
+    <string name="publication_date">PUBLICATION DATE:</string>
+    <string name="write_review">WRITE A REVIEW</string>
+
+
+    <!-- review -->
+
+    <string name="describe_problem">SEND YOUR OPINION</string>
+    <string name="opinions">OPINIONS</string>
+
+
+    <!-- error message -->
+
+    <string name="ok">OK</string>
+    <string name="not_connection">There is no Internet connection.</string>
+    <string name="no_internet">" needs an active Internet connection to work. Please, connect your device and try again\"</string>
+    <string name="unable_load">Unable to load the application data.\nPlease try again later.\n\nIf the problem persists, contact your administrator.</string>
+    <string name="updatingApp">Updating %s. Please wait.</string>
+    <string name="installError">The application can not be installed at this moment, please try again later</string>
+    <string name="not_apps">At this moment there are no applications updates</string>
+    <string name="install_app_title">Install Application</string>
+    <string name="install_app_ask">Some aspects of the application could not be valid due to different geolocalization. Do you want to continue?</string>
+    <string name="not_install_apps">At this moment there are no applications installed</string>
+    <string name="update_app_ask">Are you sure to update this application?</string>
+    <string name="not_found">No results found</string>
+    <string name="server_error">There is no response. Please try again.</string>
+    <string name="no_reviews">At this moment there are no reviews to show.</string>
+    <string name="reconnecting">Reconnecting...</string>
+    <string name="lost_session">Lost session</string>
+</resources>

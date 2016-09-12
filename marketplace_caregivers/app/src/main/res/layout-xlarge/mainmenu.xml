@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"  >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarSize="0dp"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="247.33dp"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/menuRightBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/menu_right_bar" android:layout_alignParentRight="true" android:paddingRight="10.33dp"/>
+
+            <LinearLayout
+                android:id="@+id/menuLayout"
+                android:layout_width="236.66dp"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/doSearchLayout"
+                    style="@style/MenuBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_bar"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/ic_doSearch"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:clickable="true"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_search" />
+
+                    <EditText
+                        android:id="@+id/doSearchText"
+                        style="@style/menuLabel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:background="#8fff"
+                        android:enabled="false"
+                        android:hint="@string/menuSearch"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColor="@color/AtosBlue"
+                        android:textColorHint="#ccc" android:focusable="false" android:layout_marginLeft="0dp" android:padding="5dp">
+
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/searchLayout"
+                    style="@style/MenuBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_bar"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/searchText"
+                        style="@style/menuLabel"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menuSearch" android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/ic_Search"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_search" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryBlue" />
+
+                <View
+                    android:id="@+id/View01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryLightBlue" />
+
+                <LinearLayout
+                    android:id="@+id/homeLayout"
+                    style="@style/MenuBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_bar"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/homeText"
+                        style="@style/menuLabel"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menuHome" android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/homeIcon"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_home" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/View03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryBlue" />
+
+                <View
+                    android:id="@+id/View02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryLightBlue" />
+
+                <LinearLayout
+                    android:id="@+id/latestLayout"
+                    style="@style/MenuBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_bar"
+                    android:clickable="true"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/latestText"
+                        style="@style/menuLabel"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menuLatest" android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/latestIcon"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_latest" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/View05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryBlue" />
+
+                <View
+                    android:id="@+id/View04"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryLightBlue" />
+
+                <LinearLayout
+                    android:id="@+id/categoriesLayout"
+                    style="@style/MenuBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_bar"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/categoriesText"
+                        style="@style/menuLabel"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menuCategories" android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/categoriesIcon"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_categories" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/View07"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryBlue" />
+
+                <View
+                    android:id="@+id/View06"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryLightBlue" />
+
+                <LinearLayout
+                    android:id="@+id/countriesLayout"
+                    style="@style/MenuBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_bar"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/countriesText"
+                        style="@style/menuLabel"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menuCountries" android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/countriesIcon"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_countries" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/View09"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryBlue" />
+
+                <View
+                    android:id="@+id/View08"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryLightBlue" />
+
+                <LinearLayout
+                    android:id="@+id/myAppsLayout"
+                    style="@style/MenuBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_bar"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/myAppsText"
+                        style="@style/menuLabel"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menuMyApps" android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/myAppsIcon"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_myapps" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/View11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryBlue" />
+
+                <View
+                    android:id="@+id/View10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryLightBlue" />
+
+                <LinearLayout
+                    android:id="@+id/updatedLayout"
+                    style="@style/MenuBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_bar"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/updatedText"
+                        style="@style/menuLabel"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menuUpdated" android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/updatedIcon"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_updated" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/View13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryBlue" />
+
+                <View
+                    android:id="@+id/View12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/SecondaryLightBlue" />
+
+                <LinearLayout
+                    android:id="@+id/testingSubLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true" style="@style/MenuBar" android:background="@drawable/menu_bar2">
+
+                    <TextView
+                        android:id="@+id/testingText"
+                        style="@style/menuLabel"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menuTesting" android:textSize="18sp"/>
+
+                    <ImageView
+                        android:id="@+id/testingIcon"
+                        android:layout_width="@dimen/MenuIconWidth"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:duplicateParentState="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_testing" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/statisticsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <View
+                        android:id="@+id/View15"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/SecondaryBlue" />
+
+                    <View
+                        android:id="@+id/View14"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/SecondaryLightBlue" />
+
+                    <LinearLayout
+                        android:id="@+id/statisticsSubLayout"
+                        style="@style/MenuBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/menu_bar2"
+                        android:duplicateParentState="true" android:clickable="true">
+
+                        <TextView
+                            android:id="@+id/statisticsText"
+                            style="@style/menuLabel"
+                            android:layout_width="142dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menuStatistics" android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/statisticsIcon"
+                            android:layout_width="@dimen/MenuIconWidth"
+                            android:layout_height="@dimen/MenuIconHeight"
+                            android:duplicateParentState="true"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_launcher" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout02"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:id="@+id/View17"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/SecondaryBlue" />
+
+                    <View
+                        android:id="@+id/View16"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/SecondaryLightBlue" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:background="@drawable/menu_bar" android:visibility="gone"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rightBorder"
+                android:layout_width="10.66dp"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/menuLayout" >
+
+                <ImageView
+                    android:id="@+id/menuShadow"
+                    android:layout_width="10dp"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/menu_shadow" />
+
+                <ImageView
+                    android:id="@+id/selectedArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/MenuIconHeight"
+                    android:layout_marginBottom="0.66dp"
+                    android:layout_marginTop="74.66dp"
+                    android:src="@drawable/arrow_menu" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/searchArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:layout_marginBottom="0.66dp"
+                        android:layout_marginTop="0.66dp"
+                        android:src="@drawable/arrow_menu" />
+
+                    <ImageView
+                        android:id="@+id/homeArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:layout_marginBottom="0.66dp"
+                        android:layout_marginTop="0.66dp"
+                        android:src="@drawable/arrow_menu" />
+
+                    <ImageView
+                        android:id="@+id/latestArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:layout_marginBottom="0.66dp"
+                        android:layout_marginTop="0.66dp"
+                        android:src="@drawable/arrow_menu" />
+
+                    <ImageView
+                        android:id="@+id/categoriesArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:layout_marginBottom="0.66dp"
+                        android:layout_marginTop="0.66dp"
+                        android:src="@drawable/arrow_menu" />
+
+                    <ImageView
+                        android:id="@+id/countriesArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:layout_marginBottom="0.66dp"
+                        android:layout_marginTop="0.66dp"
+                        android:src="@drawable/arrow_menu" />
+
+            <!--        <ImageView
+                        android:id="@+id/ImageView04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:layout_marginBottom="0.66dp"
+                        android:layout_marginTop="0.66dp"
+                        android:src="@drawable/arrow_menu" />
+
+                    <ImageView
+                        android:id="@+id/ImageView08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:layout_marginBottom="0.66dp"
+                        android:layout_marginTop="0.66dp"
+                        android:src="@drawable/arrow_menu" />
+
+                    <ImageView
+                        android:id="@+id/ImageView06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/MenuIconHeight"
+                        android:layout_marginBottom="0.66dp"
+                        android:layout_marginTop="0.66dp"
+                        android:src="@drawable/arrow_menu" />
+ --> 
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

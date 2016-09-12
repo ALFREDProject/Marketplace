@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="74.66dp"
+            android:orientation="horizontal" android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/logo_small" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="53.33dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/bg_categories"
+            android:gravity="center" >
+
+            <RatingBar
+                android:id="@+id/ratingRate"
+                android:layout_width="wrap_content"
+        android:layout_height="@dimen/StarsXL"
+                android:max="5"
+                android:numStars="5"
+                android:progressDrawable="@drawable/rating_bar_big_full" android:stepSize="1"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/View04"
+                android:layout_width="fill_parent"
+                android:layout_height="1.33dp"
+                android:layout_weight="1"
+                android:background="@color/White" />
+
+            <EditText
+                android:id="@+id/ratingTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#0000"
+                android:gravity="center_vertical"
+                android:hint="@string/title"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="@dimen/TextNormal" android:paddingBottom="10dp" android:paddingTop="10dp" android:textColor="@color/AtosBlue"/>
+
+            <View
+                android:id="@+id/View02"
+                android:layout_width="fill_parent"
+                android:layout_height="1.33dp"
+                android:layout_weight="1"
+                android:background="@color/LightGray" />
+
+            <View
+                android:id="@+id/View01"
+                android:layout_width="fill_parent"
+                android:layout_height="1.33dp"
+                android:layout_weight="1"
+                android:background="@color/White" />
+
+            <EditText
+                android:id="@+id/ratingBody"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:gravity="center_vertical"
+                android:hint="@string/description"
+                android:inputType="textMultiLine"
+                android:minHeight="50dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="@dimen/TextNormal" android:paddingTop="10dp" android:paddingBottom="10dp" android:textColor="@color/AtosBlue"/>
+
+            <View
+                android:id="@+id/View05"
+                android:layout_width="fill_parent"
+                android:layout_height="1.33dp"
+                android:layout_weight="1"
+                android:background="@color/LightGray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ratingSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/btn_write_review"
+            android:gravity="center"
+            android:text="@string/save_review"
+            android:textColor="@color/AtosBlue"
+            android:textSize="@dimen/TextNormal" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/ratingsProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="visible" android:layout_centerInParent="true"/>
+
+</RelativeLayout>

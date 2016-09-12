@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/thirds"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <View
+            android:id="@+id/leftmargin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/app"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="37.3dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:src="@drawable/logo_big" />
+
+            <EditText
+                android:id="@+id/dasUser"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginBottom="10.6dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="#fff"
+                android:drawablePadding="1dp"
+                android:hint="Das User"
+                android:inputType="text"
+                android:isScrollContainer="false"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="12dp"
+                android:selectAllOnFocus="true" android:textSize="@dimen/TextNormal"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/dasUser"
+                android:layout_marginBottom="10.6dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="#fff"
+                android:drawablePadding="1dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="12dp"
+                android:selectAllOnFocus="true" android:textSize="@dimen/TextNormal"/>
+
+            <TextView
+                android:id="@+id/enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/password"
+                android:layout_marginLeft="48dp"
+                android:background="@drawable/btn_enter"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:text="@string/enter"
+                android:textColor="@color/White"
+                android:textStyle="bold" android:textSize="@dimen/TextNormal" android:padding="12dp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/rightmargin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/load"
+        android:layout_width="fill_parent"
+        android:layout_height="76dp"
+        android:layout_alignBottom="@id/RelativeLayout1"
+        android:layout_below="@+id/thirds"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="76dp"
+        android:layout_marginRight="76dp"
+        android:layout_toRightOf="@+id/enter" >
+
+        <ProgressBar
+            android:id="@+id/loginProgress"
+            style="android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--  XLARGE SIZES -->
+	<dimen name="BannerHeight">89.33dp</dimen>
+	<dimen name="BannerWidth">274.66dp</dimen>	
+	<dimen name="IconHeight">80dp</dimen>
+	<dimen name="IconWidth">80dp</dimen>
+	
+	<dimen name="SmallIconHeight">40dp</dimen>
+	<dimen name="SmallIconWidth">40dp</dimen>
+	
+	    
+	<dimen name="MenuIconWidth">69.33dp</dimen>
+	<dimen name="MenuIconHeight">71.33dp</dimen>
+	
+	<dimen name="TextSmall">18sp</dimen>
+	<dimen name="TextNormal">21sp</dimen>
+	<dimen name="TextBig">24sp</dimen>
+	
+	<dimen name="StarsBig">17.33dp</dimen>
+	<dimen name="StarsSmall">17dp</dimen>
+	<dimen name="StarsXL">25dp</dimen>
+</resources>

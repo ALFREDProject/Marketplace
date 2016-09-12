@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories_names">
+        <item></item>
+        <item>ernährung</item>
+        <item>spiele</item>
+        <item>sport</item>
+        <item>gesundheit</item>
+        <item>bücher</item>
+        <item>reisen</item>
+    </string-array>
+</resources>

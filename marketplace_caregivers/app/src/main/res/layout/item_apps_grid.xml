@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="97.3dp"
+    android:layout_height="119.66dp"
+    android:orientation="vertical"
+    android:paddingBottom="11dp"
+    android:paddingLeft="8.6dp"
+    android:paddingRight="8.6dp"
+    android:paddingTop="11dp" >
+
+
+
+    <com.tempos21.market.ui.view.RoundeCornersImage
+        android:id="@+id/appIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center" />
+
+    <RatingBar
+        android:id="@+id/appRating"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/StarsSmall"
+        android:layout_below="@+id/appIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="6.66dp"
+        android:isIndicator="true"
+        android:max="5"
+        android:numStars="5"
+        android:progressDrawable="@drawable/rating_bar_full" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_alignBottom="@+id/appIcon"
+        android:layout_alignLeft="@+id/appIcon"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="TextView"
+        android:textColor="@color/White"
+        android:textSize="@dimen/TextSmall" android:paddingLeft="5dp" android:paddingRight="5dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="AtosBlue">#006EAB</color>
+	<color name="AtosBlueTransparent">#E5006EAB</color> <!-- Same than AtosBlue but Opacity 90% -->
+	<color name="SecondaryBlue">#0077B8</color>
+	<color name="SecondaryBlueTransparent">#E50077B8</color>
+	<color name="SecondaryLightBlue">#C8DBED</color>
+	<color name="DarkGray">#4d4d4d</color>
+	<color name="LightGray">#D8D8DA</color>
+	<color name="White">#FFF</color>
+</resources> 

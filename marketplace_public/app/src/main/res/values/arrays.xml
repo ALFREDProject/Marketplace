@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item></item>
+        <item>apple</item>
+        <item>game</item>
+        <item>ball</item>
+        <item>medicine</item>
+        <item>book</item>
+        <item>plane</item>
+    </string-array>
+
+    <string-array name="categories_names">
+        <item></item>
+        <item>Food</item>
+        <item>Games</item>
+        <item>Sports</item>
+        <item>Medicine</item>
+        <item>Books</item>
+        <item>Travel</item>
+    </string-array>
+
+</resources>

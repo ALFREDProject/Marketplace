@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" android:layout_width="fill_parent">
+    <View
+        android:id="@+id/View01"
+        android:layout_width="fill_parent"
+        android:layout_height="0.66dp"
+        android:background="@color/White" android:layout_marginRight="29.04dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="19.14dp"
+        android:background="@color/LightGray" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="A"
+            android:textColor="@color/DarkGray"
+            android:textSize="15.18dp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/View03"
+            android:layout_width="wrap_content"
+            android:layout_height="0.66dp"
+            android:background="@color/LightGray" />
+
+        <View
+            android:id="@+id/View02"
+            android:layout_width="wrap_content"
+            android:layout_height="0.66dp"
+            android:background="@color/White" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearCountry"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" android:layout_marginRight="29.04dp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16.66dp"
+            android:layout_marginRight="18dp"
+            android:src="@drawable/basic_arrow_right" />
+
+        <TextView
+            android:id="@+id/nameCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/DarkGray"
+            android:textSize="18.66dp" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/LightGray" android:layout_marginRight="29.04dp"/>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="74.66dp" 
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">"
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconTypeList"
+            android:src="@drawable/latest"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/latest"
+            android:id="@+id/textTypeList"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tempos21.market.ui.view.listApps.ListAppsView
+            android:id="@+id/listAppsViews"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+        </com.tempos21.market.ui.view.listApps.ListAppsView>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listProgressBar"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/notConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="2"
+            android:text="@string/not_connection"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/TextBig" />
+
+    </RelativeLayout>
+
+</LinearLayout>

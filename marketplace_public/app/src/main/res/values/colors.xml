@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="AtosBlue">#006EAB</color>
+	<color name="AtosBlueTransparent">#E5006EAB</color> <!-- Same than AtosBlue but Opacity 90% -->
+	<color name="SecondaryBlue">#0077B8</color>
+	<color name="SecondaryBlueTransparent">#E50077B8</color>
+	<color name="SecondaryLightBlue">#C8DBED</color>
+	<color name="DarkGray">#4d4d4d</color>
+	<color name="LightGray">#D8D8DA</color>
+	<color name="White">#FFF</color>
+    <color name="transparentTest">
+        #00105500
+    </color>
+
+    <color name="blackTransparent">
+        #50000000
+    </color>
+    <color name="transparentNoTest">
+        #00105500
+    </color>
+
+    <color name="brown">
+        #E2DCDF
+    </color>
+
+    <color name="red">
+        #CB403D
+    </color>
+
+    <color name="home">
+        #FFE5E5
+    </color>
+
+    <color name="home_selected">
+        #FF0800
+    </color>
+
+    <color name="blue">
+        #2FBCFF
+    </color>
+
+    <color name="gray">
+        #E9E9E9
+    </color>
+
+    <color name="gray_button">
+        #999999
+    </color>
+
+    <color name="button_categories_background">
+        #FFF7E2
+    </color>
+
+    <color name="button_categories_background_pressed">
+        #FFF71C
+    </color>
+
+    <color name="button_latest_background">
+        #D8C9EE
+    </color>
+
+    <color name="button_latest_background_pressed">
+        #D865EE
+    </color>
+
+    <color name="button_my_app_background">
+        #D1E9F1
+    </color>
+
+    <color name="button_my_app_background_pressed">
+        #0CE9F1
+    </color>
+
+    <color name="button_update_background">
+        #E8F5C5
+    </color>
+
+    <color name="button_update_background_pressed">
+        #65F5C5
+    </color>
+
+    <color name="login_button">#3ABDFD</color>
+
+    <color name="login_button_pressed">#0073AE</color>
+
+</resources> 

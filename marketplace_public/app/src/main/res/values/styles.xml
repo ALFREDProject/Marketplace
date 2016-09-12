@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="MenuBar">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+    <style name="menuLabel" parent="android:Widget.TextView">
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginLeft">25.33dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:textSize">17.333sp</item>
+        <item name="android:textColor">@drawable/menu_label_color</item>
+        <item name="android:gravity">left</item>
+        
+    </style>
+    <style name="ratingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_full</item>
+        <item name="android:minHeight">12dip</item>
+        <item name="android:maxHeight">12dip</item>
+    </style>
+
+    <style name="AlfredoAppTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="android:background">@color/White</item>
+    </style>
+
+    <style name="EditTextStyle"  parent="@android:style/Widget.Holo.Light.EditText">
+    </style>
+
+</resources>

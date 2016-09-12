@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="74.66dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="19.14dp"
+        android:src="@drawable/logo_small" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/updatingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" android:layout_marginLeft="29.04dp" android:layout_marginRight="18.48dp">
+
+            <ProgressBar
+                android:id="@+id/updatingProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:indeterminate="true"/>
+
+            <TextView
+                android:id="@+id/updatingApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/updatingApp"
+                android:textColor="@color/DarkGray"
+                android:textSize="@dimen/TextNormal" android:layout_marginTop="17dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/listLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/updateAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13.2dp"
+                android:layout_marginLeft="29.04dp"
+                android:layout_marginRight="18.48dp"
+                android:background="@drawable/btn_update_all"
+                android:gravity="center"
+                android:text="@string/updateAll"
+                android:textColor="@color/AtosBlue"
+                android:textSize="14dp"
+                android:textStyle="bold" android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29.04dp"
+                android:layout_marginRight="18.48dp" >
+
+                <ListView
+                    android:id="@+id/updateList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:choiceMode="none"
+                    android:divider="#0000"
+                    android:dividerHeight="0dip"
+                    android:fadeScrollbars="false"
+                    android:fadingEdge="none" android:listSelector="@drawable/btn_apps_list_down">
+                </ListView>
+
+                <ProgressBar
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/notConnection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/not_connection"
+                    android:textColor="@android:color/black" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

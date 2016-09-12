@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Frame"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/userImage"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_weight="0.75">
+
+
+        <LinearLayout
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/userFullName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="true"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/TextBig"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ratingDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="true"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/TextBig"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/TextBig"
+            android:text="IT&apos;S A NICE APP" />
+
+    </LinearLayout>
+
+</LinearLayout>

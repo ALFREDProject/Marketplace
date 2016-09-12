@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+
+            <solid android:color="@color/blue">
+
+            </solid>
+
+            <size
+                android:width="150dp"
+                android:height="150dp">
+
+            </size>
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/microphone"
+        android:bottom="20dp"
+        android:left="40dp"
+        android:right="40dp"
+        android:top="20dp"></item>
+
+
+</layer-list>

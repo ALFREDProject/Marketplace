@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+
+            <solid android:color="@color/red">
+
+            </solid>
+
+            <size
+                android:width="100dp"
+                android:height="100dp">
+
+            </size>
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/keyboard"
+        android:bottom="30dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="30dp"></item>
+
+
+</layer-list>

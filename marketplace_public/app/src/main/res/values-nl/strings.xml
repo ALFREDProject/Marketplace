@@ -1,0 +1,107 @@
+<!--
+    Fichero generado de manera automática a partir del documento compartido:
+    https://docs.google.com/spreadsheets/d/1rLrVXuOoog18uAno7vexNs_dvoIjPp4GxsN2S-AEcYM/edit
+    Fecha de generación: Fri Apr 17 2015 14:47:46 GMT+0200 (CEST)
+-->
+
+<!--
+    Idioma Dutch
+-->
+<resources>
+
+
+    <!-- ======================================= -->
+    <!-- ===== ALFRED =====  -->
+
+
+    <!-- Translated -->
+
+    <string name="app_name">Alfredo Markt</string>
+
+
+    <!-- login -->
+
+    <string name="user">GEBRUIKER</string>
+    <string name="password">WACHTWOORD</string>
+    <string name="enter">Inloggen</string>
+
+
+    <!-- menu -->
+
+    <string name="me">IK</string>
+    <string name="home">START</string>
+    <string name="search">ZOEKEN</string>
+
+
+    <!-- home -->
+
+    <string name="latest">NIEUWSTE</string>
+    <string name="categories">CATEGORIEËN</string>
+    <string name="myApps">MIJN APPS</string>
+    <string name="update_app_title">BIJ TE WERKEN</string>
+
+
+    <!-- profile -->
+
+    <string name="edit_profile">BEWERK PROFIEL</string>
+    <string name="name">NAAM</string>
+    <string name="email">E-MAIL</string>
+
+
+    <!-- search -->
+
+    <string name="search_message_text">HOE KAN IK U HELPEN?</string>
+    <string name="tap_to_talk">KLIK OM TEGEN MIJ TE PRATEN</string>
+    <string name="tap_to_write">KLIK OM TE SCHRIJVEN</string>
+    <string name="search_bar">Zoeken</string>
+    <string name="cancel">ANNULEER</string>
+    <string name="send">STUUR</string>
+    <string name="request_result">Resultaat van het verzoek</string>
+
+
+    <!-- categories -->
+
+    <string name="games">SPELLEN</string>
+    <string name="sports">SPORT</string>
+    <string name="medicine">MEDICIJNEN</string>
+    <string name="food">ETEN</string>
+    <string name="books">BOEKEN</string>
+    <string name="travel">REIZEN</string>
+
+
+    <!-- app detail -->
+
+    <string name="install">INSTALLEREN</string>
+    <string name="uninstall">VERWIJDEREN</string>
+    <string name="download">DOWNLOADEN</string>
+    <string name="version">VERSIE:</string>
+    <string name="size">GROOTTE:</string>
+    <string name="publication_date">PUBLICATIEDATUM:</string>
+    <string name="write_review">GEEF UW MENING</string>
+
+
+    <!-- review -->
+
+    <string name="describe_problem">STUUR UW FEEDBACK</string>
+    <string name="opinions">FEEDBACK</string>
+
+
+    <!-- error message -->
+
+    <string name="ok">OK</string>
+    <string name="not_connection">Er is geen internet verbinding</string>
+    <string name="no_internet">" heeft een internet verbinding nodig. Verbind u toestel met internet en probeer het nogmaals\"</string>
+    <string name="unable_load">De data kan niet geladen worden. \nProbeer het later nogmaals.\n\nAls het probleem blijft bestaan, neem contact op met uw systeem begeleider</string>
+    <string name="updatingApp">%s opgeladen. Wacht alstublieft</string>
+    <string name="installError">De applicatie kan op het moment niet geïnstalleerd worden, probeer het later nogmaals</string>
+    <string name="not_apps">Op dit moment zijn er geen nieuwe actualisaties beschikbaar</string>
+    <string name="install_app_title">Installeer de applicatie</string>
+    <string name="install_app_ask">Enkele aspecten van de applicatie kunnen niet gebruikt worden door uw locatie. Wilt u doorgaan?</string>
+    <string name="not_install_apps">Er is geen applicatie geïnstalleerd op het moment.</string>
+    <string name="update_app_ask">Weet u zeker dat u deze applicatie wilt actualiseren?</string>
+    <string name="not_found">Geen resultaten gevonden</string>
+    <string name="server_error">Er is geen antwoord. Probeer het nogmaals.</string>
+    <string name="no_reviews">Op het moment zijn er geen meningen te zien. </string>
+    <string name="reconnecting">Herverbinden...</string>
+    <string name="lost_session">Sessie verloren </string>
+</resources>
