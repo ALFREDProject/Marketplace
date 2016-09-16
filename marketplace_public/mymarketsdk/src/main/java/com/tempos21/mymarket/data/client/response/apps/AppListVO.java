@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AppListVO {
 
-  @Expose
-  @SerializedName("app")
-  public List<AppVO> appVO;
+    @Expose
+    @SerializedName("app")
+    public List<AppVO> appVO;
 }

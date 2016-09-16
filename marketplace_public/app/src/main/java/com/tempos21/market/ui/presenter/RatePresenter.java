@@ -4,5 +4,5 @@ import com.tempos21.mymarket.domain.dto.request.RateRequest;
 
 public interface RatePresenter {
 
-  void setRate(RateRequest rateRequest);
+    void setRate(RateRequest rateRequest);
 }

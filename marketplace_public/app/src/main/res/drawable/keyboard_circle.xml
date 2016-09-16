@@ -17,8 +17,8 @@
     </item>
 
     <item
-        android:drawable="@drawable/keyboard"
         android:bottom="30dp"
+        android:drawable="@drawable/keyboard"
         android:left="10dp"
         android:right="10dp"
         android:top="30dp"></item>

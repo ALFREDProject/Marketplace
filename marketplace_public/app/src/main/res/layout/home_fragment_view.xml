@@ -1,136 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:background="@android:color/white"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/latestBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginRight="2.5dp"
             android:layout_weight="1"
             android:background="@drawable/btn_latest"
             android:gravity="center"
-            android:orientation="vertical"
-            android:layout_marginRight="2.5dp">
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:scaleType="center"
-                android:src="@drawable/latest"
-                android:background="@android:color/transparent" />
+                android:src="@drawable/latest"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:gravity="center"
                 android:text="@string/latest"
                 android:textColor="@android:color/black"
-                android:textSize="20dp"
-                android:background="@android:color/transparent" />
+                android:textSize="20dp"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/categoriesBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="2.5dp"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="@drawable/btn_categories"
-            android:orientation="vertical"
-            android:layout_marginLeft="2.5dp">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:scaleType="center"
-                android:src="@drawable/category"
-                android:background="@android:color/transparent" />
+                android:src="@drawable/category"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:gravity="center"
                 android:text="@string/categories"
                 android:textColor="@android:color/black"
-                android:textSize="20dp"
-                android:background="@android:color/transparent" />
+                android:textSize="20dp"/>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
         android:layout_weight="1"
         android:background="@android:color/white"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/myAppBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginRight="2.5dp"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="@drawable/btn_myapps"
-            android:orientation="vertical"
-            android:layout_marginRight="2.5dp">
-
+            android:gravity="center"
+            android:orientation="vertical">
 
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:scaleType="center"
-                android:src="@drawable/cloud"
-                android:background="@android:color/transparent" />
+                android:src="@drawable/cloud"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:gravity="center"
                 android:text="@string/myApps"
                 android:textColor="@android:color/black"
-                android:textSize="20dp"
-                android:background="@android:color/transparent" />
+                android:textSize="20dp"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/updateAppsBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="2.5dp"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="@drawable/btn_update_background"
-            android:orientation="vertical"
-            android:layout_marginLeft="2.5dp">
+            android:gravity="center"
+            android:orientation="vertical">
 
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:scaleType="center"
-                android:src="@drawable/update"
-                android:background="@android:color/transparent" />
+                android:src="@drawable/update"/>
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:gravity="center"
                 android:text="@string/update_app_title"
                 android:textColor="@android:color/black"
-                android:textSize="20dp"
-                android:background="@android:color/transparent" />
+                android:textSize="20dp"/>
         </LinearLayout>
     </LinearLayout>
 

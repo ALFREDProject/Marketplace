@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@drawable/btn_apps_grid_down"
-         android:state_pressed="true"/>
+          android:state_pressed="true"/>
     <item android:drawable="@drawable/btn_apps_grid_up"/>
 
 </selector>

@@ -1,8 +1,5 @@
 package com.tempos21.market.ui.adapter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Handler;
@@ -11,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -20,16 +16,18 @@ import com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer;
 import com.tempos21.market.Constants;
 import com.worldline.alfredo.R;
 
+import java.util.List;
+
 
 public class ScreenshotsAdapter extends ArrayAdapter<String> {
 
     private final DisplayImageOptions options;
-    private ArrayList<String> screenshots;
+    private List<String> screenshots;
     private Context context;
 
 
-    public ScreenshotsAdapter(Context context, ArrayList<String> screenshots) {
-        super(context,  R.layout.item_screenshot, screenshots);
+    public ScreenshotsAdapter(Context context, List<String> screenshots) {
+        super(context, R.layout.item_screenshot, screenshots);
         this.screenshots = screenshots;
         this.context = context;
 
@@ -66,7 +64,7 @@ public class ScreenshotsAdapter extends ArrayAdapter<String> {
             v = convertView;
         } else {
             LayoutInflater vi = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = vi.inflate(R.layout.item_screenshot,null);
+            v = vi.inflate(R.layout.item_screenshot, null);
         }
         return v;
     }

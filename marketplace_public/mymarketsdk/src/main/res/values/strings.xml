@@ -1,13 +1,13 @@
 <resources>
-  <string name="app_name">MyMarket SDK</string>
-  <string name="app_download_ticker">""</string>
-  <string name="app_downloaded">Downloaded</string>
-  <string name="app_downloading">Downloading</string>
-  <string name="app_download_package">package:</string>
-  <string name="app_download_type">"application/vnd.android.package-archive"</string>
-  <string name="app_download_plus">+</string>
-  <string name="app_download_more">" more"</string>
-  <string name="app_download_dots">…</string>
-  <string name="app_download_applications_downloaded">" applications downloaded"</string>
-  <string name="app_download_applications_downloading">" applications downloading"</string>
+    <string name="app_name">MyMarket SDK</string>
+    <string name="app_download_ticker">""</string>
+    <string name="app_downloaded">Downloaded</string>
+    <string name="app_downloading">Downloading</string>
+    <string name="app_download_package">package:</string>
+    <string name="app_download_type">"application/vnd.android.package-archive"</string>
+    <string name="app_download_plus">+</string>
+    <string name="app_download_more">" more"</string>
+    <string name="app_download_dots">…</string>
+    <string name="app_download_applications_downloaded">" applications downloaded"</string>
+    <string name="app_download_applications_downloading">" applications downloading"</string>
 </resources>

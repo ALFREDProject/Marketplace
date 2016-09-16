@@ -4,8 +4,8 @@ import com.google.gson.annotations.Expose;
 
 public class CountryVO {
 
-  @Expose
-  public String name;
-  @Expose
-  public Integer id;
+    @Expose
+    public String name;
+    @Expose
+    public Integer id;
 }

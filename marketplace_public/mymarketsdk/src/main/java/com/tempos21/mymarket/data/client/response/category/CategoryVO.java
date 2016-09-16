@@ -4,10 +4,10 @@ import com.google.gson.annotations.Expose;
 
 public class CategoryVO {
 
-  @Expose
-  public String name;
-  @Expose
-  public Integer id;
-  @Expose
-  public String image;
+    @Expose
+    public String name;
+    @Expose
+    public Integer id;
+    @Expose
+    public String image;
 }

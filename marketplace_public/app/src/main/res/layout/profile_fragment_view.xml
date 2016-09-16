@@ -7,8 +7,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_margin="5dp"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:background="@android:color/white"
         android:orientation="vertical"
         android:visibility="visible">
@@ -25,42 +25,43 @@
 
                 <ImageView
                     android:id="@+id/userProfileImg"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:src="@drawable/olivia_profile"
- />
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/olivia_profile" />
+
                 <ImageView
                     android:id="@+id/cameraImg"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/camera"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:background="@android:color/transparent" />
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/camera" />
             </RelativeLayout>
 
 
             <RelativeLayout
+                android:id="@+id/editProfileBtnRoot"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/button_categories_background"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:background="@color/button_categories_background">
 
                 <TextView
                     android:id="@+id/editProfileBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableTop="@drawable/pencil"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
-                    android:text="@string/edit_profile"
-                    android:textSize="@dimen/TextBig"
-                    android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
                     android:background="@android:color/transparent"
-                    android:singleLine="false" />
+                    android:drawableTop="@drawable/pencil"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="@string/edit_profile"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/TextBig" />
             </RelativeLayout>
 
 
@@ -68,7 +69,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
 
             <ImageButton
                 android:id="@+id/ColumnaAnio6"
@@ -85,32 +87,34 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:maxLines="1"
                 android:background="@color/transparentTest"
-                android:hint="@string/name" />
+                android:hint="@string/name"
+                android:maxLines="1"
+                android:singleLine="true" />
 
             <ImageButton
                 android:id="@+id/deleteName"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
-                android:scaleType="centerCrop"
                 android:background="@color/transparentTest"
+                android:scaleType="centerCrop"
                 android:src="@drawable/delete" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
 
             <ImageButton
                 android:id="@+id/ColumnaAnio8"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
-                android:scaleType="centerCrop"
                 android:background="@color/transparentTest"
+                android:scaleType="centerCrop"
                 android:src="@drawable/mail" />
 
             <EditText
@@ -118,20 +122,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:maxLines="1"
                 android:layout_weight="1"
                 android:background="@color/transparentTest"
-                android:hint="@string/email" />
+                android:hint="@string/email"
+                android:maxLines="1"
+                android:singleLine="true" />
 
             <ImageButton
                 android:id="@+id/deleteEmail"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
-                android:scaleType="centerCrop"
                 android:background="@color/transparentTest"
+                android:scaleType="centerCrop"
                 android:src="@drawable/delete" />
 
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/button_categories_background"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/btn_categories"
+                android:singleLine="false"
+                android:textAllCaps="true"
+                android:text="@string/logout"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/TextBig" />
         </LinearLayout>
 
 

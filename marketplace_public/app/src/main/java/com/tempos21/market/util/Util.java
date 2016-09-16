@@ -20,35 +20,32 @@ import java.util.Locale;
 
 /**
  * This class indicates if there are connection to network
- * 
- * @author A519130
  *
+ * @author A519130
  */
 public class Util {
-	/**
-	 * This method manage if there are connection to network
-	 * 
-	 * @param context
-	 * 					Context of specific Activity
-	 * @return
-	 * 					true if there are connection
-	 * 					false otherwise
-	 */
-	public static boolean netConnect(Context context){
+    /**
+     * This method manage if there are connection to network
+     *
+     * @param context Context of specific Activity
+     * @return true if there are connection
+     * false otherwise
+     */
+    public static boolean netConnect(Context context) {
 
-		ConnectivityManager cm;
+        ConnectivityManager cm;
         NetworkInfo info = null;
-        
-        try{
-        	cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        try {
+            cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
             info = cm.getActiveNetworkInfo();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        if (info != null && info.isConnected()){
+
+        if (info != null && info.isConnected()) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -57,7 +54,7 @@ public class Util {
     public static int getVersion(Context context, String packageName) {
         List<PackageInfo> packages = context.getPackageManager().getInstalledPackages(0);
         for (PackageInfo packageInfo : packages) {
-            ApplicationInfo info=packageInfo.applicationInfo;
+            ApplicationInfo info = packageInfo.applicationInfo;
             if ((info.flags & ApplicationInfo.FLAG_SYSTEM) == 0) {
                 if (info.packageName.equals(packageName)) {
                     return packageInfo.versionCode;

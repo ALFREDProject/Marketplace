@@ -6,5 +6,5 @@ import java.util.List;
 
 public class LanguageListResponse {
 
-  public List<Language> languageList;
+    public List<Language> languageList;
 }

@@ -35,7 +35,7 @@
 
     <!-- home -->
 
-    <string name="latest">NEUIGKEITEN</string>
+    <string name="latest">AKTUELLE APPS</string>
     <string name="categories">KATEGORIEN</string>
     <string name="myApps">MEINE APPS</string>
     <string name="update_app_title">AKTUALISIERUNG</string>
@@ -77,7 +77,7 @@
     <string name="version">VERSION:</string>
     <string name="size">GRÖSSE:</string>
     <string name="publication_date">VERÖFFENTLICHUNGSDATUM:</string>
-    <string name="write_review">EINE BEWERTUNG SCHEIBEN</string>
+    <string name="write_review">EINE BEWERTUNG SCHREIBEN</string>
 
 
     <!-- review -->
@@ -104,4 +104,6 @@
     <string name="no_reviews">Momentan sind keine Bewertungen verfügbar.</string>
     <string name="reconnecting">Erneuter Verbindungsaufbau…</string>
     <string name="lost_session">Verbindungsfehler</string>
+    <string name="tap_again_to_exit">Drücken Sie wieder zu verlassen</string>
+    <string name="logout">Ausloggen</string>
 </resources>

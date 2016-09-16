@@ -10,104 +10,104 @@ import java.util.UUID;
 
 public class MyMarketConfig {
 
-  private Platform platform;
-  private String deviceId;
-  private int platformVersion;
-  private String baseUrl;
-
-  private MyMarketConfig(Builder builder) {
-    platform = builder.platform;
-    deviceId = builder.deviceId;
-    platformVersion = builder.platformVersion;
-    baseUrl = builder.baseUrl;
-  }
-
-  public Platform getPlatform() {
-    return platform;
-  }
-
-  public String getDeviceId() {
-    return deviceId;
-  }
-
-  public int getPlatformVersion() {
-    return platformVersion;
-  }
-
-  public String getBaseUrl() {
-    return baseUrl;
-  }
-
-  public static class Builder {
-
-    private final Context context;
+    private Platform platform;
     private String deviceId;
-    private Platform platform = Platform.ANDROID;
-    private int platformVersion = Build.VERSION.SDK_INT;
+    private int platformVersion;
     private String baseUrl;
 
-    public Builder(Context context) {
-      this.context = context;
-      this.deviceId = "7e77dd2b-653d-3018-8f49-dc81fa673244"; // TODO HARDCODED FOR TESTING PURPOSES getDeviceId()
-      this.platformVersion = 17; // TODO HARDCODED FOR TESTING PURPOSES getPlatformVersion()
+    private MyMarketConfig(Builder builder) {
+        platform = builder.platform;
+        deviceId = builder.deviceId;
+        platformVersion = builder.platformVersion;
+        baseUrl = builder.baseUrl;
     }
 
-    private String getDeviceId() {
-      final TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-
-      final String tmDevice, tmSerial, androidId;
-      tmDevice = "" + tm.getDeviceId();
-      tmSerial = "" + tm.getSimSerialNumber();
-      androidId = "" + android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-
-      UUID deviceUuid = new UUID(androidId.hashCode(), ((long) tmDevice.hashCode() << 32) | tmSerial.hashCode());
-      return deviceUuid.toString();
+    public Platform getPlatform() {
+        return platform;
     }
 
-    private int getPlatformVersion() {
-      return Build.VERSION.SDK_INT;
+    public String getDeviceId() {
+        return deviceId;
     }
 
-    /**
-     * This parameter will be used to serve applications of an specific platform. Default
-     * value will return Android applications, but other platform could be forced.
-     *
-     * @param platform The platform to be used. Default is Platform.ANDROID
-     */
-    public Builder setPlatform(Platform platform) {
-      this.platform = platform;
-      return this;
+    public int getPlatformVersion() {
+        return platformVersion;
     }
 
-    public Builder setDeviceId(String deviceId) {
-      this.deviceId = deviceId;
-      return this;
+    public String getBaseUrl() {
+        return baseUrl;
     }
 
-    /**
-     * The version of the device is used to determine which application can be or not
-     * installed in the device.
-     *
-     * @param platformVersion The version to be notified. Default is android.os.Build.VERSION.SDK_INT
-     */
-    public Builder setPlatformVersion(int platformVersion) {
-      this.platformVersion = platformVersion;
-      return this;
-    }
+    public static class Builder {
 
-    /**
-     * This is the url where the MyMarket API is located. This is a mandatory parameter. Not
-     * providing this parameter will raise an exception on the init method.
-     *
-     * @param url The url to use
-     */
-    public Builder setBaseUrl(String url) {
-      this.baseUrl = url;
-      return this;
-    }
+        private final Context context;
+        private String deviceId;
+        private Platform platform = Platform.ANDROID;
+        private int platformVersion = Build.VERSION.SDK_INT;
+        private String baseUrl;
 
-    public MyMarketConfig build() {
-      return new MyMarketConfig(this);
+        public Builder(Context context) {
+            this.context = context;
+            this.deviceId = "7e77dd2b-653d-3018-8f49-dc81fa673244"; // TODO HARDCODED FOR TESTING PURPOSES getDeviceId()
+            this.platformVersion = 17; // TODO HARDCODED FOR TESTING PURPOSES getPlatformVersion()
+        }
+
+        private String getDeviceId() {
+            final TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+
+            final String tmDevice, tmSerial, androidId;
+            tmDevice = "" + tm.getDeviceId();
+            tmSerial = "" + tm.getSimSerialNumber();
+            androidId = "" + android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+
+            UUID deviceUuid = new UUID(androidId.hashCode(), ((long) tmDevice.hashCode() << 32) | tmSerial.hashCode());
+            return deviceUuid.toString();
+        }
+
+        public Builder setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+
+        private int getPlatformVersion() {
+            return Build.VERSION.SDK_INT;
+        }
+
+        /**
+         * The version of the device is used to determine which application can be or not
+         * installed in the device.
+         *
+         * @param platformVersion The version to be notified. Default is android.os.Build.VERSION.SDK_INT
+         */
+        public Builder setPlatformVersion(int platformVersion) {
+            this.platformVersion = platformVersion;
+            return this;
+        }
+
+        /**
+         * This parameter will be used to serve applications of an specific platform. Default
+         * value will return Android applications, but other platform could be forced.
+         *
+         * @param platform The platform to be used. Default is Platform.ANDROID
+         */
+        public Builder setPlatform(Platform platform) {
+            this.platform = platform;
+            return this;
+        }
+
+        /**
+         * This is the url where the MyMarket API is located. This is a mandatory parameter. Not
+         * providing this parameter will raise an exception on the init method.
+         *
+         * @param url The url to use
+         */
+        public Builder setBaseUrl(String url) {
+            this.baseUrl = url;
+            return this;
+        }
+
+        public MyMarketConfig build() {
+            return new MyMarketConfig(this);
+        }
     }
-  }
 }

@@ -6,11 +6,11 @@ package com.tempos21.mymarket.domain.task;
  */
 interface ThreadExecutor {
 
-  /**
-   * Executes a {@link Runnable}.
-   *
-   * @param runnable The class that implements {@link Runnable} interface.
-   */
-  void execute(final Runnable runnable);
+    /**
+     * Executes a {@link Runnable}.
+     *
+     * @param runnable The class that implements {@link Runnable} interface.
+     */
+    void execute(final Runnable runnable);
 }
 

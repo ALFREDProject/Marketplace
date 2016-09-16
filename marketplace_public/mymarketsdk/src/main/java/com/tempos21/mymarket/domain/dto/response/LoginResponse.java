@@ -4,5 +4,5 @@ import com.tempos21.mymarket.sdk.model.User;
 
 public class LoginResponse {
 
-  public User user;
+    public User user;
 }

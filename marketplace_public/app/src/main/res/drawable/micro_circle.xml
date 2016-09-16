@@ -17,8 +17,8 @@
     </item>
 
     <item
-        android:drawable="@drawable/microphone"
         android:bottom="20dp"
+        android:drawable="@drawable/microphone"
         android:left="40dp"
         android:right="40dp"
         android:top="20dp"></item>

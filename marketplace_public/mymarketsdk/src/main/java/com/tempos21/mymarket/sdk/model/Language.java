@@ -5,28 +5,34 @@ import android.os.Parcelable;
 
 public class Language implements Parcelable {
 
-  public long id;
-  public String name;
+    public static final Creator<Language> CREATOR = new Creator<Language>() {
+        public Language createFromParcel(Parcel source) {
+            return new Language(source);
+        }
 
-  @Override
-  public int describeContents() { return 0; }
+        public Language[] newArray(int size) {
+            return new Language[size];
+        }
+    };
+    public long id;
+    public String name;
 
-  @Override
-  public void writeToParcel(Parcel dest, int flags) {
-    dest.writeValue(this.id);
-    dest.writeString(this.name);
-  }
+    public Language() {
+    }
 
-  public Language() {}
+    private Language(Parcel in) {
+        this.id = (long) in.readValue(Integer.class.getClassLoader());
+        this.name = in.readString();
+    }
 
-  private Language(Parcel in) {
-    this.id = (long) in.readValue(Integer.class.getClassLoader());
-    this.name = in.readString();
-  }
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
-  public static final Creator<Language> CREATOR = new Creator<Language>() {
-    public Language createFromParcel(Parcel source) {return new Language(source);}
-
-    public Language[] newArray(int size) {return new Language[size];}
-  };
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeValue(this.id);
+        dest.writeString(this.name);
+    }
 }

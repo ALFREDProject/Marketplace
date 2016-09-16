@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.worldline.alfredo">
+<manifest package="com.worldline.alfredo"
+          xmlns:android="http://schemas.android.com/apk/res/android">/>
 
-    <uses-sdk android:minSdkVersion="15" />
-    
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--
     <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.DELETE_PACKAGES" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="com.tempos21.market.permission.C2D_MESSAGE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    -->
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.tempos21.market.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <!-- required for GCM Push Notifications -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
     <permission
         android:name="com.worldline.alfredo.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-    <uses-permission android:name="com.worldline.alfredo.permission.C2D_MESSAGE" />
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.worldline.alfredo.permission.C2D_MESSAGE"/>
 
     <supports-screens
         android:anyDensity="true"
@@ -30,48 +32,49 @@
         android:normalScreens="true"
         android:resizeable="true"
         android:smallScreens="true"
-        android:xlargeScreens="true" />
+        android:xlargeScreens="true"/>
 
     <application
+        android:name="com.tempos21.market.AlfredoApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AlfredoAppTheme"
-        android:name="com.tempos21.market.AlfredoApplication">
+        android:theme="@style/AlfredoAppTheme">
 
         <activity
             android:name="com.tempos21.market.ui.LoginActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="fullSensor">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <activity
             android:name="com.tempos21.market.ui.fragment.MainActivityFragment"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
         </activity>
 
         <activity
             android:name="com.tempos21.market.ui.AppActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        
-        <activity
-            android:name="com.tempos21.market.ui.RatingsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
         </activity>
 
-        <service android:name="com.tempos21.market.gcm.GcmIntentService" />
+        <activity
+            android:name="com.tempos21.market.ui.RatingsActivity"
+            android:screenOrientation="fullSensor">
+        </activity>
+
+        <service android:name="com.tempos21.market.gcm.GcmIntentService"/>
 
         <receiver
             android:name="com.tempos21.market.gcm.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.worldline.alfredo" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.worldline.alfredo"/>
             </intent-filter>
         </receiver>
 

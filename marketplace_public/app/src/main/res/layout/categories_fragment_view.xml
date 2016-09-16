@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@android:color/white">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
 
     <TextView
-        android:layout_margin="10dp"
-        android:text="@string/categories"
-        android:drawableLeft="@drawable/category"
-        android:drawablePadding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textColor="@android:color/black"
+        android:layout_margin="10dp"
         android:background="@android:color/white"
+        android:drawableLeft="@drawable/category"
+        android:drawablePadding="10dp"
         android:gravity="center_vertical"
-        android:textStyle="bold" />
+        android:text="@string/categories"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <ScrollView
+            android:id="@+id/scrollViewCategories"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/scrollViewCategories"
             android:layout_centerInParent="true">
 
             <LinearLayout
-                android:orientation="vertical"
+                android:id="@+id/categoriesLayout"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/categoriesLayout">
+                android:orientation="vertical">
             </LinearLayout>
         </ScrollView>
 
@@ -40,19 +40,19 @@
             android:id="@+id/categoryProgress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true"/>
 
         <TextView
             android:id="@+id/notCategories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="10dp"
             android:text="@string/not_categories"
             android:textColor="@android:color/black"
-            android:visibility="gone"
-            android:layout_centerInParent="true"
-            android:textSize="@dimen/TextBig" />
+            android:textSize="@dimen/TextBig"
+            android:visibility="gone"/>
 
     </RelativeLayout>
 

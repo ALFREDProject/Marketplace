@@ -1,6 +1,7 @@
 package com.tempos21.market.ui.fragment;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -112,13 +114,20 @@ public class SearchFragment extends Fragment implements View.OnClickListener, Te
         keyboardButton.setVisibility(View.INVISIBLE);
         microButton.setVisibility(View.INVISIBLE);
         searchView.setVisibility(View.GONE);
+
+        try {
+            editTextSearch.requestFocus();
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(editTextSearch, InputMethodManager.SHOW_IMPLICIT);
+        } catch (Exception ignored) {
+        }
     }
 
 
     /**
      * Showing google speech input dialog
-     * */
-    public void voiceRecognition(){
+     */
+    public void voiceRecognition() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
@@ -131,7 +140,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener, Te
     }
 
 
-    public void sendSearchTextToServer(String searchText){
+    public void sendSearchTextToServer(String searchText) {
         Fragment newFragment = new SearchAppsFragment(getActivity(), searchText);
         ((MainActivityFragment) getActivity()).replaceFragment(R.id.bottomFragment, newFragment, true);
     }

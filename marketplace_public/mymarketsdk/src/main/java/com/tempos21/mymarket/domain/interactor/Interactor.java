@@ -9,7 +9,7 @@ import com.tempos21.mymarket.domain.task.Task;
  */
 public abstract class Interactor<I, O> extends Task<I, O> {
 
-  public Interactor(Context context) {
-    super(context);
-  }
+    public Interactor(Context context) {
+        super(context);
+    }
 }

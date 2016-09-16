@@ -24,7 +24,6 @@ public class MToast extends Toast {
      * @param text     The text to show.  Can be formatted text.
      * @param duration How long to display the message.  Either {@link #LENGTH_SHORT} or
      *                 {@link #LENGTH_LONG}
-     *
      */
     public static Toast makeText(Context context, CharSequence text, int duration) {
 
@@ -37,7 +36,7 @@ public class MToast extends Toast {
 
         result.setView(v);
         result.setDuration(duration);
-        
+
 
         return result;
     }

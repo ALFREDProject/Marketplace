@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- not in use -->
-	<string name="ratings">Ratings</string>
+    <string name="ratings">Ratings</string>
     <string name="updateAll">Update all</string>
     <string name="title">Title</string>
     <string name="description">Description</string>

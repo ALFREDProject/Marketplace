@@ -4,13 +4,13 @@ import android.content.Context;
 
 public class BaseRealmDAO {
 
-  private final Context context;
+    private final Context context;
 
-  public BaseRealmDAO(Context context) {
-    this.context = context;
-  }
+    public BaseRealmDAO(Context context) {
+        this.context = context;
+    }
 
-  public Context getContext() {
-    return context;
-  }
+    public Context getContext() {
+        return context;
+    }
 }

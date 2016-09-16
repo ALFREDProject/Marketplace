@@ -2,22 +2,22 @@ package com.tempos21.mymarket.sdk.util;
 
 public enum BuildVariant {
 
-  DEBUG(0, "DEBUG"), RELEASE(1, "RELEASE");
+    DEBUG(0, "DEBUG"), RELEASE(1, "RELEASE");
 
-  private int index;
-  private String name;
+    private int index;
+    private String name;
 
-  BuildVariant(int index, String name) {
-    this.index = index;
-    this.name = name;
-  }
+    BuildVariant(int index, String name) {
+        this.index = index;
+        this.name = name;
+    }
 
-  public int getIndex() {
-    return index;
-  }
+    public int getIndex() {
+        return index;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 }
 

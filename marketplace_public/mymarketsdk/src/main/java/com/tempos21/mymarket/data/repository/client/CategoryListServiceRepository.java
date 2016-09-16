@@ -14,28 +14,28 @@ import java.util.List;
 
 public class CategoryListServiceRepository extends AbstractRepository<Void, List<Category>> {
 
-  public CategoryListServiceRepository(Context context) {
-    super(context);
-  }
-
-  @Override
-  public List<Category> get(Void input) throws Exception {
-    try {
-      GetCategoryListClient client = new GetCategoryListClient(getContext());
-      ClientResponse<CategoryListVO> response = client.execute(null);
-      CategoryVOMapper mapper = new CategoryVOMapper();
-      return mapper.toModel(response.data.categoryVO);
-    } catch (Exception e) {
-      if (MyMarket.getInstance().isDebug()) {
-        e.printStackTrace();
-      }
-      throw new Exception(e.getMessage());
-
+    public CategoryListServiceRepository(Context context) {
+        super(context);
     }
-  }
 
-  @Override
-  public void store(List<Category> output) throws Exception {
-    throw new UnsupportedOperationException();
-  }
+    @Override
+    public List<Category> get(Void input) throws Exception {
+        try {
+            GetCategoryListClient client = new GetCategoryListClient(getContext());
+            ClientResponse<CategoryListVO> response = client.execute(null);
+            CategoryVOMapper mapper = new CategoryVOMapper();
+            return mapper.toModel(response.data.categoryVO);
+        } catch (Exception e) {
+            if (MyMarket.getInstance().isDebug()) {
+                e.printStackTrace();
+            }
+            throw new Exception(e.getMessage());
+
+        }
+    }
+
+    @Override
+    public void store(List<Category> output) throws Exception {
+        throw new UnsupportedOperationException();
+    }
 }

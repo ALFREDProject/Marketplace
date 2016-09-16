@@ -13,20 +13,20 @@ import retrofit.client.Response;
 
 public class GetAppDetailClient extends Client<AppDetailRequest, ClientResponse<AppDetailVO>> {
 
-  public GetAppDetailClient(Context context) {
-    super(context);
-  }
-
-  @Override
-  protected ClientResponse<AppDetailVO> request(AppDetailRequest request) throws Exception {
-    MarketClientService service = MarketClientAdapter.getInstance(getContext()).getService();
-    Response serviceResponse = service.getAppById(request.id);
-    ClientResponse<AppDetailVO> response = AppDetailVOMapper.mapResponse(Strings.convertStreamToString(serviceResponse.getBody().in(), "UTF-8"));
-    if ("OK".equals(response.status)) {
-      return response;
-    } else {
-      ErrorHandler.getInstance(getContext()).checkClientResponseError(response);
-      throw new Exception("Application detail fail");
+    public GetAppDetailClient(Context context) {
+        super(context);
     }
-  }
+
+    @Override
+    protected ClientResponse<AppDetailVO> request(AppDetailRequest request) throws Exception {
+        MarketClientService service = MarketClientAdapter.getInstance(getContext()).getService();
+        Response serviceResponse = service.getAppById(request.id);
+        ClientResponse<AppDetailVO> response = AppDetailVOMapper.mapResponse(Strings.convertStreamToString(serviceResponse.getBody().in(), "UTF-8"));
+        if ("OK".equals(response.status)) {
+            return response;
+        } else {
+            ErrorHandler.getInstance(getContext()).checkClientResponseError(response);
+            throw new Exception("Application detail fail");
+        }
+    }
 }

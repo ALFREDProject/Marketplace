@@ -12,20 +12,20 @@ import retrofit.client.Response;
 
 public class GetCategoryListClient extends Client<Void, ClientResponse<CategoryListVO>> {
 
-  public GetCategoryListClient(Context context) {
-    super(context);
-  }
-
-  @Override
-  protected ClientResponse<CategoryListVO> request(Void request) throws Exception {
-    MarketClientService service = MarketClientAdapter.getInstance(getContext()).getService();
-    Response serviceResponse = service.getCategoryList();
-    ClientResponse<CategoryListVO> response = CategoryVOMapper.mapResponse(Strings.convertStreamToString(serviceResponse.getBody().in(), "UTF-8"));
-    if ("OK".equals(response.status)) {
-      return response;
-    } else {
-      ErrorHandler.getInstance(getContext()).checkClientResponseError(response);
-      throw new Exception("Category list loading fail");
+    public GetCategoryListClient(Context context) {
+        super(context);
     }
-  }
+
+    @Override
+    protected ClientResponse<CategoryListVO> request(Void request) throws Exception {
+        MarketClientService service = MarketClientAdapter.getInstance(getContext()).getService();
+        Response serviceResponse = service.getCategoryList();
+        ClientResponse<CategoryListVO> response = CategoryVOMapper.mapResponse(Strings.convertStreamToString(serviceResponse.getBody().in(), "UTF-8"));
+        if ("OK".equals(response.status)) {
+            return response;
+        } else {
+            ErrorHandler.getInstance(getContext()).checkClientResponseError(response);
+            throw new Exception("Category list loading fail");
+        }
+    }
 }

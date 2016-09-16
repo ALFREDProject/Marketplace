@@ -2,9 +2,9 @@ package com.tempos21.market.ui.presenter;
 
 public interface AppListPresenter {
 
-  void loadMore(int listSize);
+    void loadMore(int listSize);
 
-  void refreshList();
+    void refreshList();
 
-  void getAppList();
+    void getAppList();
 }

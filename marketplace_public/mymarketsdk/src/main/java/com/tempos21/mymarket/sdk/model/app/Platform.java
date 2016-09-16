@@ -5,32 +5,38 @@ import android.os.Parcelable;
 
 public class Platform implements Parcelable {
 
-  public long id;
-  public String name;
-  public Os os;
+    public static final Parcelable.Creator<Platform> CREATOR = new Parcelable.Creator<Platform>() {
+        public Platform createFromParcel(Parcel source) {
+            return new Platform(source);
+        }
 
-  @Override
-  public int describeContents() { return 0; }
+        public Platform[] newArray(int size) {
+            return new Platform[size];
+        }
+    };
+    public long id;
+    public String name;
+    public Os os;
 
-  @Override
-  public void writeToParcel(Parcel dest, int flags) {
-    dest.writeLong(this.id);
-    dest.writeString(this.name);
-    dest.writeParcelable(this.os, flags);
-  }
+    public Platform() {
+    }
 
-  public Platform() {}
+    protected Platform(Parcel in) {
+        this.id = in.readLong();
+        this.name = in.readString();
+        this.os = in.readParcelable(com.tempos21.mymarket.data.database.entity.Os.class.getClassLoader());
+    }
 
-  protected Platform(Parcel in) {
-    this.id = in.readLong();
-    this.name = in.readString();
-    this.os = in.readParcelable(com.tempos21.mymarket.data.database.entity.Os.class.getClassLoader());
-  }
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
-  public static final Parcelable.Creator<Platform> CREATOR = new Parcelable.Creator<Platform>() {
-    public Platform createFromParcel(Parcel source) {return new Platform(source);}
-
-    public Platform[] newArray(int size) {return new Platform[size];}
-  };
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeLong(this.id);
+        dest.writeString(this.name);
+        dest.writeParcelable(this.os, flags);
+    }
 }
 

@@ -19,6 +19,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private View myAppBtn;
     private View updateAppsBtn;
     private HomeFragmentBehaviorListener homeFragmentBehaviorListener;
+    private boolean paused;
 
 
     @Override
@@ -72,6 +73,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     public void setHomeFragmentBehaviorListener(HomeFragmentBehaviorListener homeFragmentBehaviorListener) {
         this.homeFragmentBehaviorListener = homeFragmentBehaviorListener;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        paused = false;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        paused = true;
+    }
+
+    public boolean isPaused() {
+        return paused;
     }
 
     public interface HomeFragmentBehaviorListener {

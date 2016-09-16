@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+<RelativeLayout android:id="@+id/RelativeLayout1"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
 
     <GridView
         android:id="@+id/appsGrid"
@@ -13,14 +13,17 @@
         android:layout_alignParentTop="true"
         android:columnWidth="131dp"
         android:drawingCacheQuality="high"
+        android:listSelector="@drawable/bg_list_down"
         android:numColumns="4"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
         android:verticalSpacing="0dp"
-        android:visibility="visible" android:scrollbarAlwaysDrawHorizontalTrack="true" android:listSelector="@drawable/bg_list_down">
+        android:visibility="visible">
     </GridView>
 
     <ProgressBar
         android:id="@+id/appsProgress"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>

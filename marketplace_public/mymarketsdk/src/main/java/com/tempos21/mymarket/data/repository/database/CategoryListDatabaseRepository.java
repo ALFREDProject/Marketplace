@@ -10,21 +10,21 @@ import java.util.List;
 
 public class CategoryListDatabaseRepository extends AbstractRepository<Void, List<Category>> {
 
-  public CategoryListDatabaseRepository(Context context) {
-    super(context);
-  }
+    public CategoryListDatabaseRepository(Context context) {
+        super(context);
+    }
 
-  @Override
-  public List<Category> get(Void input) throws Exception {
-    CategoryDAO dao = new CategoryDAO(getContext());
-    return dao.getList();
+    @Override
+    public List<Category> get(Void input) throws Exception {
+        CategoryDAO dao = new CategoryDAO(getContext());
+        return dao.getList();
 
-  }
+    }
 
-  @Override
-  public void store(List<Category> output) throws Exception {
-    CategoryDAO dao = new CategoryDAO(getContext());
-    dao.clearAll();
-    dao.putList(output);
-  }
+    @Override
+    public void store(List<Category> output) throws Exception {
+        CategoryDAO dao = new CategoryDAO(getContext());
+        dao.clearAll();
+        dao.putList(output);
+    }
 }

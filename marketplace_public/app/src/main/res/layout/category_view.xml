@@ -1,34 +1,38 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
-        android:tag="Games,2"
         android:id="@+id/categoryBtn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="2dp"
         android:background="@drawable/btn_categories"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:tag="Games,2">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:src="@drawable/game"
+            android:id="@+id/categoryImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:background="@android:color/transparent"
-            android:id="@+id/categoryImage" />
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:scaleX="2"
+            android:scaleY="2"
+            tools:src="@drawable/game"/>
 
         <TextView
+            android:id="@+id/categoryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:gravity="center"
             android:text="@string/games"
             android:textColor="@android:color/black"
-            android:textSize="20dp"
-            android:background="@android:color/transparent"
-            android:id="@+id/categoryName" />
+            android:textSize="20dp"/>
     </LinearLayout>
 
 </FrameLayout>

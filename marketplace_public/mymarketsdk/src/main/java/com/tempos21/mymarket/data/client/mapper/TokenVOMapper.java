@@ -10,25 +10,26 @@ import java.lang.reflect.Type;
 
 public class TokenVOMapper extends BaseVOMapper<TokenVO, Token> {
 
-  public static ClientResponse<TokenVO> mapResponse(String json) {
-    Type type = new TypeToken<ClientResponse<TokenVO>>() {}.getType();
-    return new Gson().fromJson(json, type);
-  }
+    public static ClientResponse<TokenVO> mapResponse(String json) {
+        Type type = new TypeToken<ClientResponse<TokenVO>>() {
+        }.getType();
+        return new Gson().fromJson(json, type);
+    }
 
-  @Override
-  public Token toModel(TokenVO vo) {
-    Token token = new Token();
-    token.uuid = vo.uuid;
-    token.platforms = new PlatformVOMapper().toModel(vo.platforms);
-    token.users = new UserVOMapper().toModel(vo.users);
-    token.version = vo.version;
-    token.id = vo.id;
+    @Override
+    public TokenVO toVO(Token model) {
+        return null;
+    }
 
-    return token;
-  }
+    @Override
+    public Token toModel(TokenVO vo) {
+        Token token = new Token();
+        token.uuid = vo.uuid;
+        token.platforms = new PlatformVOMapper().toModel(vo.platforms);
+        token.users = new UserVOMapper().toModel(vo.users);
+        token.version = vo.version;
+        token.id = vo.id;
 
-  @Override
-  public TokenVO toVO(Token model) {
-    return null;
-  }
+        return token;
+    }
 }

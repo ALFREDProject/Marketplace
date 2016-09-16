@@ -2,13 +2,13 @@ package com.tempos21.mymarket.domain.dto.request;
 
 public class InstalledAppRequest {
 
-  private String jsonArray;
+    private String jsonArray;
 
-  public String getJsonArray() {
-    return jsonArray;
-  }
+    public String getJsonArray() {
+        return jsonArray;
+    }
 
-  public void setJsonArray(String jsonArray) {
-    this.jsonArray = "{\"change\":" + jsonArray + "}";
-  }
+    public void setJsonArray(String jsonArray) {
+        this.jsonArray = "{\"change\":" + jsonArray + "}";
+    }
 }

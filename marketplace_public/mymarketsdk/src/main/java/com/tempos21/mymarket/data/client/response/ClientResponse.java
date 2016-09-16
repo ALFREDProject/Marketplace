@@ -5,11 +5,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class ClientResponse<D> {
 
-  @SerializedName("error_code")
-  @Expose
-  public Integer errorCode;
-  @Expose
-  public String status;
-  @Expose
-  public D data;
+    @SerializedName("error_code")
+    @Expose
+    public Integer errorCode;
+    @Expose
+    public String status;
+    @Expose
+    public D data;
 }

@@ -12,19 +12,19 @@ import retrofit.client.Response;
 
 public class GetAppRateListClient extends Client<AppRateListRequest, ClientResponse<AppRateListVO>> {
 
-  public GetAppRateListClient(Context context) {
-    super(context);
-  }
-
-  @Override
-  protected ClientResponse<AppRateListVO> request(AppRateListRequest request) throws Exception {
-    MarketClientService service = MarketClientAdapter.getInstance(getContext()).getService();
-    Response serviceResponse = service.getAppRateList(request.id);
-    ClientResponse<AppRateListVO> response = AppRateVOMapper.mapResponse(Strings.convertStreamToString(serviceResponse.getBody().in(), "UTF-8"));
-    if ("OK".equals(response.status)) {
-      return response;
-    } else {
-      throw new Exception("Application rate list fail");
+    public GetAppRateListClient(Context context) {
+        super(context);
     }
-  }
+
+    @Override
+    protected ClientResponse<AppRateListVO> request(AppRateListRequest request) throws Exception {
+        MarketClientService service = MarketClientAdapter.getInstance(getContext()).getService();
+        Response serviceResponse = service.getAppRateList(request.id);
+        ClientResponse<AppRateListVO> response = AppRateVOMapper.mapResponse(Strings.convertStreamToString(serviceResponse.getBody().in(), "UTF-8"));
+        if ("OK".equals(response.status)) {
+            return response;
+        } else {
+            throw new Exception("Application rate list fail");
+        }
+    }
 }

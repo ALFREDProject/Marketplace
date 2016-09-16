@@ -10,20 +10,20 @@ import java.util.List;
 
 public class LanguageListDatabaseRepository extends AbstractRepository<Void, List<Language>> {
 
-  public LanguageListDatabaseRepository(Context context) {
-    super(context);
-  }
+    public LanguageListDatabaseRepository(Context context) {
+        super(context);
+    }
 
-  @Override
-  public List<Language> get(Void input) throws Exception {
-    LanguageDAO dao = new LanguageDAO(getContext());
-    return dao.getList();
-  }
+    @Override
+    public List<Language> get(Void input) throws Exception {
+        LanguageDAO dao = new LanguageDAO(getContext());
+        return dao.getList();
+    }
 
-  @Override
-  public void store(List<Language> output) throws Exception {
-    LanguageDAO dao = new LanguageDAO(getContext());
-    dao.clearAll();
-    dao.putList(output);
-  }
+    @Override
+    public void store(List<Language> output) throws Exception {
+        LanguageDAO dao = new LanguageDAO(getContext());
+        dao.clearAll();
+        dao.putList(output);
+    }
 }

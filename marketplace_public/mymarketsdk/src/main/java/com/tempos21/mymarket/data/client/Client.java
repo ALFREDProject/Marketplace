@@ -14,33 +14,33 @@ import com.tempos21.mymarket.data.task.Task;
  */
 abstract class Client<I, O> extends Task<I, O> {
 
-  public Client(Context context) {
-    super(context);
-  }
-
-  @Override
-  protected final O perform(I request) throws Exception {
-    if (isConnected(getContext())) {
-      return request(request);
-    } else {
-      throw new NoConnectionException();
+    public Client(Context context) {
+        super(context);
     }
-  }
 
-  protected abstract O request(I request) throws Exception;
-
-  private boolean isConnected(final Context context) {
-    ConnectivityManager conMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-
-    if (conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED ||
-      conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTING ||
-      conMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
-      conMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTING) {
-      return true;
-    } else if (conMgr.getNetworkInfo(0).getState() == NetworkInfo.State.DISCONNECTED || conMgr.getNetworkInfo(1).getState() == NetworkInfo.State.DISCONNECTED) {
-      return false;
+    @Override
+    protected final O perform(I request) throws Exception {
+        if (isConnected(getContext())) {
+            return request(request);
+        } else {
+            throw new NoConnectionException();
+        }
     }
-    return false;
-  }
+
+    protected abstract O request(I request) throws Exception;
+
+    private boolean isConnected(final Context context) {
+        ConnectivityManager conMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        if (conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED ||
+                conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTING ||
+                conMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                conMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTING) {
+            return true;
+        } else if (conMgr.getNetworkInfo(0).getState() == NetworkInfo.State.DISCONNECTED || conMgr.getNetworkInfo(1).getState() == NetworkInfo.State.DISCONNECTED) {
+            return false;
+        }
+        return false;
+    }
 }
 

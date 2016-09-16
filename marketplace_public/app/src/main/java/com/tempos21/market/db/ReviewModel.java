@@ -88,9 +88,9 @@ public class ReviewModel {
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
             ContentValues values = setValues(review, appId);
-            if (!isOnDB(""+review.id)) {
+            if (!isOnDB("" + review.id)) {
                 db.insert(TABLE_NAME, null, values);
-            }else{
+            } else {
                 db.delete(TABLE_NAME, ID + "=" + review.id, null);
                 db.insert(TABLE_NAME, null, values);
             }

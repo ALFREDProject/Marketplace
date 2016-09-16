@@ -5,8 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.tempos21.mymarket.sdk.model.Category;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,7 +66,7 @@ public class ScreenshotsModel {
         DatabaseHelper dbHelper = new DatabaseHelper(context);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-        for(String name: screenshots) {
+        for (String name : screenshots) {
             Screenshot screenshot = new Screenshot();
             screenshot.name = name;
             screenshot.appId = appId;
@@ -136,7 +134,7 @@ public class ScreenshotsModel {
     }
 
 
-    public class Screenshot{
+    public class Screenshot {
         public String name;
         public int appId;
     }

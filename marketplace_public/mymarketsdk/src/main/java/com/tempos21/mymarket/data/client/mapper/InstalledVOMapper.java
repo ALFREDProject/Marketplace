@@ -10,8 +10,9 @@ import java.util.List;
 
 public class InstalledVOMapper {
 
-  public static ClientResponse<List<DatumVO>> mapResponse(String json) {
-    Type type = new TypeToken<ClientResponse<List<DatumVO>>>() {}.getType();
-    return new Gson().fromJson(json, type);
-  }
+    public static ClientResponse<List<DatumVO>> mapResponse(String json) {
+        Type type = new TypeToken<ClientResponse<List<DatumVO>>>() {
+        }.getType();
+        return new Gson().fromJson(json, type);
+    }
 }

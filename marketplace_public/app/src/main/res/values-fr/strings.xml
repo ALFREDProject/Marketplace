@@ -35,7 +35,7 @@
 
     <!-- home -->
 
-    <string name="latest">RÉCENT</string>
+    <string name="latest">DERNIÈRES APPS</string>
     <string name="categories">CATÉGORIES</string>
     <string name="myApps">MES APPLICATIONS</string>
     <string name="update_app_title">MISE À JOUR</string>
@@ -104,4 +104,6 @@
     <string name="no_reviews">Aucune révision à montrer pour le moment.</string>
     <string name="reconnecting">Reconnection…</string>
     <string name="lost_session">Session interrompue</string>
+    <string name="tap_again_to_exit">Appuyez à nouveau pour quitter</string>
+    <string name="logout">Se déconnecter</string>
 </resources>

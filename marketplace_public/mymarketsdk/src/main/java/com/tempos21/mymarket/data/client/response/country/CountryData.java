@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CountryData {
 
-  @Expose
-  @SerializedName("countryResponse")
-  public List<CountryVO> countryVO;
+    @Expose
+    @SerializedName("countryResponse")
+    public List<CountryVO> countryVO;
 }

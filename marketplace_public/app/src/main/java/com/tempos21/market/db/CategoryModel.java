@@ -75,16 +75,6 @@ public class CategoryModel {
         return categories;
     }
 
-
-    private Category readCursor(Cursor cursor) {
-        Category category = new Category();
-        category.id = cursor.getInt(cursor.getColumnIndex(ID));
-        category.name = cursor.getString(cursor.getColumnIndex(NAME));
-
-        return category;
-    }
-
-
     /**
      * This method sets the Alfredo market categories installed in device
      *
@@ -106,6 +96,13 @@ public class CategoryModel {
         }
     }
 
+    private Category readCursor(Cursor cursor) {
+        Category category = new Category();
+        category.id = cursor.getInt(cursor.getColumnIndex(ID));
+        category.name = cursor.getString(cursor.getColumnIndex(NAME));
+
+        return category;
+    }
 
     //@SuppressLint("UseValueOf")
     private ContentValues setValues(Category category) {

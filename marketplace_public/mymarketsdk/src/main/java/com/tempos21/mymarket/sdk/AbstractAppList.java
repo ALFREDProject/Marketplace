@@ -9,66 +9,62 @@ import java.util.List;
 
 public abstract class AbstractAppList<C> {
 
-  public enum State {
+    protected State state = State.LIST;
+    protected Context context;
+    protected String name;
+    protected int start;
+    protected int from;
+    protected int elements;
+    protected String sorting;
+    protected int categoryId;
+    protected int countryId;
+    protected int languageId;
+    protected boolean hasPromoImage;
+    protected AppListType appListType;
+    protected String query;
+    protected boolean finished;
+    protected C config;
 
-    LIST, MORE, REFRESH
-  }
+    AbstractAppList(Context context, C config) {
+        this.context = context;
+        this.config = config;
+        applyConfig(config);
+    }
 
-  protected State state = State.LIST;
+    public abstract void applyConfig(C config);
 
-  protected Context context;
+    /**
+     * Return the list of apps checking if exists a cache and saving or updating the cache if needed
+     */
+    public abstract void getAppList(final OnAppListListener listener);
 
-  protected String name;
-  protected int start;
-  protected int from;
-  protected int elements;
-  protected String sorting;
-  protected int categoryId;
-  protected int countryId;
-  protected int languageId;
-  protected boolean hasPromoImage;
-  protected AppListType appListType;
-  protected String query;
+    /**
+     * Return the next list of apps when the request is paginated
+     */
+    public abstract void loadMoreResults(final OnAppListListener listener, int listSize);
 
-  protected boolean finished;
+    /**
+     * Return the list of apps without checking if exists a cache but saving or updating the cache if needed
+     */
+    public abstract void getForcedAppList(final OnAppListListener listener);
 
-  protected C config;
+    public Context getContext() {
+        return context;
+    }
 
-  AbstractAppList(Context context, C config) {
-    this.context = context;
-    this.config = config;
-    applyConfig(config);
-  }
+    public State getState() {
+        return state;
+    }
 
-  public abstract void applyConfig(C config);
+    public enum State {
 
-  /**
-   * Return the list of apps checking if exists a cache and saving or updating the cache if needed
-   */
-  public abstract void getAppList(final OnAppListListener listener);
+        LIST, MORE, REFRESH
+    }
 
-  /**
-   * Return the next list of apps when the request is paginated
-   */
-  public abstract void loadMoreResults(final OnAppListListener listener, int listSize);
+    public interface OnAppListListener {
 
-  /**
-   * Return the list of apps without checking if exists a cache but saving or updating the cache if needed
-   */
-  public abstract void getForcedAppList(final OnAppListListener listener);
+        void onAppListSuccess(AppListType type, List<App> response);
 
-  public Context getContext() {
-    return context;
-  }
-
-  public State getState() {
-    return state;
-  }
-
-  public interface OnAppListListener {
-
-    void onAppListSuccess(AppListType type, List<App> response);
-
-    void onAppListError(AppListType type, long id, Exception e);
-  }
+        void onAppListError(AppListType type, long id, Exception e);
+    }
 }

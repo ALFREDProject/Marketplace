@@ -4,10 +4,10 @@ import com.google.gson.annotations.Expose;
 
 public class OsVO {
 
-  @Expose
-  public String name;
-  @Expose
-  public Integer id;
-  @Expose
-  public String extension;
+    @Expose
+    public String name;
+    @Expose
+    public Integer id;
+    @Expose
+    public String extension;
 }

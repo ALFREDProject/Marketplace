@@ -35,7 +35,7 @@
 
     <!-- home -->
 
-    <string name="latest">NIEUWSTE</string>
+    <string name="latest">NIEUWSTE APPS</string>
     <string name="categories">CATEGORIEËN</string>
     <string name="myApps">MIJN APPS</string>
     <string name="update_app_title">BIJ TE WERKEN</string>
@@ -104,4 +104,6 @@
     <string name="no_reviews">Op het moment zijn er geen meningen te zien. </string>
     <string name="reconnecting">Herverbinden...</string>
     <string name="lost_session">Sessie verloren </string>
+    <string name="tap_again_to_exit">Druk weer terug om af te sluiten</string>
+    <string name="logout">Uitloggen</string>
 </resources>

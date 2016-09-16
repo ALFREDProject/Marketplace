@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="menuSearch">SEARCH</string>
-	<string name="menuHome">Home</string>
-	<string name="menuLatest">Latest</string>
-	<string name="menuCategories">Categories</string>
-	<string name="menuCountries">Countries</string>
-	<string name="menuMyApps">My Apps</string>
-	<string name="menuUpdated">Update Apps</string>
-	<string name="menuTesting">Apps for testing</string>
-	<string name="menuStatistics">Statistics</string>
+    <string name="menuSearch">SEARCH</string>
+    <string name="menuHome">Home</string>
+    <string name="menuLatest">Latest</string>
+    <string name="menuCategories">Categories</string>
+    <string name="menuCountries">Countries</string>
+    <string name="menuMyApps">My Apps</string>
+    <string name="menuUpdated">Update Apps</string>
+    <string name="menuTesting">Apps for testing</string>
+    <string name="menuStatistics">Statistics</string>
 </resources>

@@ -10,22 +10,23 @@ import java.lang.reflect.Type;
 
 public class OsVOMapper extends BaseVOMapper<OsVO, Os> {
 
-  public static ClientResponse<OsVO> mapResponse(String json) {
-    Type type = new TypeToken<ClientResponse<OsVO>>() {}.getType();
-    return new Gson().fromJson(json, type);
-  }
+    public static ClientResponse<OsVO> mapResponse(String json) {
+        Type type = new TypeToken<ClientResponse<OsVO>>() {
+        }.getType();
+        return new Gson().fromJson(json, type);
+    }
 
-  @Override
-  public Os toModel(OsVO vo) {
-    Os os = new Os();
-    os.id = vo.id;
-    os.name = vo.name;
-    os.extension = vo.extension;
-    return os;
-  }
+    @Override
+    public OsVO toVO(Os model) {
+        return null;
+    }
 
-  @Override
-  public OsVO toVO(Os model) {
-    return null;
-  }
+    @Override
+    public Os toModel(OsVO vo) {
+        Os os = new Os();
+        os.id = vo.id;
+        os.name = vo.name;
+        os.extension = vo.extension;
+        return os;
+    }
 }

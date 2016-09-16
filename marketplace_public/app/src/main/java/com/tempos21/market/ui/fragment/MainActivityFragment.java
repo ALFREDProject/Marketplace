@@ -1,5 +1,6 @@
 package com.tempos21.market.ui.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -7,12 +8,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tempos21.market.Constants;
 import com.tempos21.market.gcm.GCMHarvester;
 import com.tempos21.mymarket.sdk.MyMarketPreferences;
+import com.tempos21.rampload.util.Prefs;
 import com.worldline.alfredo.R;
 
 import java.util.ArrayList;
@@ -31,19 +36,8 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
     private ListAppsFragment listAppsFragment;
     private MyAppsFragment myAppsFragment;
     private UpdatedFragment updatedFragment;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        setContentView(main);
-        initFragments();
-        registerPush();
-
-    }
+    private int tapExitCount = 0;
+    private boolean showExitMessage;
 
     private void initFragments() {
         if (menuFragment == null) {
@@ -84,18 +78,17 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
 
         replaceFragment(R.id.topFragment, menuFragment, false);
         replaceFragment(R.id.bottomFragment, homeFragment, false);
+        tapExitCount = 1;
     }
 
-
-    private void registerPush(){
+    private void registerPush() {
         String registrationId = MyMarketPreferences.getInstance(getApplicationContext()).getString(Constants.MY_MARKET_PREFERENCE_KEY_TOKEN, null);
         GCMHarvester pushH = new GCMHarvester();
         pushH.pushRegister(registrationId);
     }
 
-
     public int getUserImage() {
-        String user = MyMarketPreferences.getInstance(this).getString(Constants.MY_MARKET_PREFERENCE_KEY_USER_NAME, "");
+        String user = Prefs.getString(Constants.MY_MARKET_PREFERENCE_KEY_USER_NAME, "");
 
         if (user.equalsIgnoreCase("otto")) {
             return R.drawable.otto_profile;
@@ -112,8 +105,6 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
         return R.drawable.olivia_profile;
     }
 
-
-
     public void replaceFragment(int srcViewHolderId, Fragment fragment, boolean addToBckStack) {
 //        FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 //            trans.replace(srcViewHolderId, fragment);
@@ -122,7 +113,7 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
 //        }
 //        trans.commit();
 
-        replaceMainFragment(srcViewHolderId,fragment, addToBckStack,true);
+        replaceMainFragment(srcViewHolderId, fragment, addToBckStack, true);
 
 
     }
@@ -136,12 +127,12 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
         }
     }
 
-    public int replaceMainFragment(int srcViewHolderId,Fragment f, boolean mustBeAddedToBackStack, boolean mustBeAnimated) {
+    public int replaceMainFragment(int srcViewHolderId, Fragment f, boolean mustBeAddedToBackStack, boolean mustBeAnimated) {
         FragmentTransaction ft = getSupportFragmentManager()
                 .beginTransaction();
 
         if (mustBeAnimated) {
-           // ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            // ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         }
 
         ft.replace(srcViewHolderId, f, ((Object) f).getClass().getName());
@@ -152,11 +143,6 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
         return ft.commit();
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
     private void addFragment(int srcViewHolderId, Fragment fragment, boolean addToBckStack) {
         FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
         trans.add(srcViewHolderId, fragment);
@@ -165,7 +151,6 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
         }
         trans.commit();
     }
-
 
     @Override
     public void onSearchButtonClicked() {
@@ -181,6 +166,7 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
         menuFragment.homeBtn.setSelected(true);
         clearBackStack();
         replaceFragment(R.id.bottomFragment, homeFragment, false);
+        tapExitCount = 1;
     }
 
     @Override
@@ -190,7 +176,6 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
         clearBackStack();
         replaceFragment(R.id.bottomFragment, profileFragment, false);
     }
-
 
     @Override
     public void onLatestButtonClicked() {
@@ -220,10 +205,9 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
         replaceFragment(R.id.bottomFragment, updatedFragment, true);
     }
 
-
     /**
      * Receiving speech input
-     * */
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -233,7 +217,7 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
                 if (resultCode == RESULT_OK && null != data) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-                    if(!result.isEmpty()){
+                    if (!result.isEmpty()) {
                         searchFragment.sendSearchTextToServer(result.get(0));
                     }
                 }
@@ -241,5 +225,42 @@ public class MainActivityFragment extends FragmentActivity implements MenuFragme
             }
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        if (homeFragment.isPaused()) {
+            onHomeButtonClicked();
+        } else {
+            if (tapExitCount > 0) {
+                tapExitCount--;
+                showMessage(MainActivityFragment.this, getString(R.string.tap_again_to_exit));
+            } else {
+                super.onBackPressed();
+            }
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        setContentView(main);
+        initFragments();
+        registerPush();
+
+    }
+
+    protected void showMessage(Context context, String message) {
+        Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+        View view = toast.getView();
+        TextView text = (TextView) view.findViewById(android.R.id.message);
+        text.setBackgroundColor(getResources().getColor(R.color.transparent));
+        text.setTextColor(getResources().getColor(R.color.White));
+        /*here you can do anything with text*/
+        toast.show();
+    }
+
 
 }

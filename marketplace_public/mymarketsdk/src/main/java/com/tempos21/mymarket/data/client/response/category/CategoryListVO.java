@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CategoryListVO {
 
-  @Expose
-  @SerializedName("categoryResponse")
-  public List<CategoryVO> categoryVO;
+    @Expose
+    @SerializedName("categoryResponse")
+    public List<CategoryVO> categoryVO;
 }

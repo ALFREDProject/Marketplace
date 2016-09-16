@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    
-    android:orientation="vertical" >
+<RelativeLayout android:id="@+id/RelativeLayout1"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/app"
@@ -21,16 +21,16 @@
             android:layout_height="0dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/alfredo_splash"
             android:layout_gravity="center"
+            android:layout_margin="20dp"
             android:layout_weight="0.6"
-            android:layout_margin="20dp" />
+            android:src="@drawable/alfredo_splash"/>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.4">
+            android:layout_weight="0.4"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/dasUser"
@@ -38,14 +38,14 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imageView1"
+                android:layout_marginBottom="10dp"
                 android:drawablePadding="1dp"
                 android:hint="@string/user"
                 android:inputType="text"
                 android:isScrollContainer="false"
                 android:maxLines="1"
                 android:minLines="1"
-                android:selectAllOnFocus="true"
-                android:layout_marginBottom="10dp"/>
+                android:selectAllOnFocus="true"/>
 
             <EditText
                 android:id="@+id/password"
@@ -53,18 +53,18 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/dasUser"
+                android:layout_marginBottom="20dp"
                 android:drawablePadding="1dp"
                 android:hint="@string/password"
                 android:inputType="textPassword"
-                android:selectAllOnFocus="true"
-                android:layout_marginBottom="20dp" />
+                android:selectAllOnFocus="true"/>
 
             <RelativeLayout
                 android:id="@+id/load"
                 android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/app"
                 android:layout_centerHorizontal="true"
-                android:layout_height="wrap_content"
                 android:layout_centerVertical="true">
 
                 <TextView
@@ -72,25 +72,27 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="false"
+                    android:layout_centerInParent="true"
                     android:background="@drawable/btn_enter"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
                     android:text="@string/enter"
                     android:textColor="@color/White"
-                    android:textStyle="bold"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
                     android:textSize="@dimen/TextBig"
-                    android:layout_centerInParent="true" />
+                    android:textStyle="bold"/>
 
                 <ProgressBar
                     android:id="@+id/loginProgress"
                     style="android:attr/progressBarStyleInverse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:indeterminate="true" android:layout_centerVertical="true" android:layout_centerHorizontal="true"
-                    android:visibility="gone" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:indeterminate="true"
+                    android:visibility="gone"/>
             </RelativeLayout>
 
         </LinearLayout>

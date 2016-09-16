@@ -1,103 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/root"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+<RelativeLayout android:id="@+id/root"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
 
         <TextView
+            android:id="@+id/reviewTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/describe_problem"
-            android:id="@+id/reviewTitle"
+            android:layout_marginTop="20dp"
             android:background="@color/gray"
-            android:padding="5dp"
-            android:textColor="@color/DarkGray"
-            android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginTop="20dp" />
+            android:padding="5dp"
+            android:text="@string/describe_problem"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/DarkGray"
+            android:textStyle="bold"/>
 
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/sendOpinion"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5"
             android:layout_marginBottom="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:id="@+id/sendOpinion">
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
 
             <RatingBar
                 android:id="@+id/ratingWrite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:max="5"
                 android:numStars="5"
-                android:stepSize="1"
                 android:progressDrawable="@drawable/rating_bar_big_full"
-                android:layout_gravity="center" />
+                android:stepSize="1"/>
 
             <EditText
+                android:id="@+id/editWrite"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editWrite"
-                android:layout_weight="1"
                 android:layout_marginBottom="10dp"
-                android:textSize="@dimen/TextBig" />
+                android:layout_weight="1"
+                android:textSize="@dimen/TextBig"/>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/cancelWrite"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/cancel"
-                    android:id="@+id/cancelWrite"
-                    android:layout_weight="0.5"
-                    android:padding="3dp"
                     android:layout_marginRight="20dp"
-                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_cancel"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/cancel"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/White"
                     android:textSize="@dimen/cancel"
-                    android:background="@drawable/btn_cancel"
-                    android:gravity="center" />
+                    android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/sendWrite"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/send"
-                    android:id="@+id/sendWrite"
                     android:layout_weight="0.5"
-                    android:padding="10dp"
-                    android:textSize="@dimen/TextBig"
-                    android:textColor="@color/White"
                     android:background="@drawable/btn_enter"
-                    android:textStyle="bold"
-                    android:gravity="center" />
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/send"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/TextBig"
+                    android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>
 
         <RelativeLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.6">
+            android:layout_weight="0.6"
+            android:orientation="vertical">
 
             <ListView
                 android:id="@+id/ratingsList"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -106,8 +107,7 @@
                 android:divider="#000"
                 android:dividerHeight="0dp"
                 android:listSelector="#0000"
-                android:visibility="visible"
-                android:layout_centerInParent="true">
+                android:visibility="visible">
 
             </ListView>
 
@@ -115,20 +115,20 @@
                 android:id="@+id/noReviews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:text="@string/no_reviews"
                 android:textColor="@android:color/black"
-                android:visibility="gone"
                 android:textSize="@dimen/TextBig"
-                android:layout_centerInParent="true" />
+                android:visibility="gone"/>
 
             <ProgressBar
+                android:id="@+id/ratingsProgress"
                 style="?android:attr/progressBarStyleLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/ratingsProgress"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"/>
 
         </RelativeLayout>
 

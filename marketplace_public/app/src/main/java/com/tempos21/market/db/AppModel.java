@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.tempos21.market.util.Util;
-import com.tempos21.mymarket.sdk.MyMarket;
 import com.tempos21.mymarket.sdk.model.app.App;
 
 import java.util.ArrayList;
@@ -95,53 +94,6 @@ public class AppModel {
         return apps;
     }
 
-
-    /**
-     * This method gets the Alfredo Market apps installed in device
-     *
-     * @return apps installed from device
-     */
-    public List<App> getAppsByCategory(String categoryId) {
-        List<App> apps = new ArrayList<App>();
-        Cursor cursor;
-
-        DatabaseHelper dbHelper = new DatabaseHelper(context);
-        cursor = dbHelper.getReadableDatabase().query(TABLE_NAME, null, CATEGORY_ID + "=" + categoryId, null, null, null, null);
-
-        while (cursor.moveToNext()) {
-            apps.add(readCursor(cursor));
-        }
-
-        cursor.close();
-        dbHelper.close();
-
-        return apps;
-    }
-
-
-    private App readCursor(Cursor cursor) {
-        App app = new App();
-        app.id = cursor.getInt(cursor.getColumnIndex(ID));
-        app.versionNumber = cursor.getInt(cursor.getColumnIndex(VERSION_NUMBER));
-        app.versionId = cursor.getInt(cursor.getColumnIndex(VERSION_ID));
-        app.supportEmails = cursor.getString(cursor.getColumnIndex(SUPPORT_EMAIL));
-        app.rating = cursor.getFloat(cursor.getColumnIndex(RATING));
-        app.promoUrl = cursor.getString(cursor.getColumnIndex(PROMO_URL));
-        app.packageName = cursor.getString(cursor.getColumnIndex(PACKAGENAME));
-        app.notificationEmails = cursor.getString(cursor.getColumnIndex(NOTIFICATION_EMAIL));
-        app.name = cursor.getString(cursor.getColumnIndex(NAME));
-        app.versionString = cursor.getString(cursor.getColumnIndex(VERSION_STRING));
-        app.iconUrl = cursor.getString(cursor.getColumnIndex(ICON_URL));
-        app.externalUrl = cursor.getString(cursor.getColumnIndex(EXTERNAL_URL));
-        app.externalBinary = cursor.getString(cursor.getColumnIndex(EXTERNAL_BINARY)).equalsIgnoreCase("true");
-        app.date = cursor.getString(cursor.getColumnIndex(DATE));
-        app.author = cursor.getString(cursor.getColumnIndex(AUTHOR));
-        app.allowed = cursor.getString(cursor.getColumnIndex(ALLOWED)).equalsIgnoreCase("true");
-
-        return app;
-    }
-
-
     /**
      * This method sets the Alfredo market apps installed in device
      *
@@ -165,6 +117,49 @@ public class AppModel {
         }
     }
 
+    /**
+     * This method gets the Alfredo Market apps installed in device
+     *
+     * @return apps installed from device
+     */
+    public List<App> getAppsByCategory(String categoryId) {
+        List<App> apps = new ArrayList<App>();
+        Cursor cursor;
+
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        cursor = dbHelper.getReadableDatabase().query(TABLE_NAME, null, CATEGORY_ID + "=" + categoryId, null, null, null, null);
+
+        while (cursor.moveToNext()) {
+            apps.add(readCursor(cursor));
+        }
+
+        cursor.close();
+        dbHelper.close();
+
+        return apps;
+    }
+
+    private App readCursor(Cursor cursor) {
+        App app = new App();
+        app.id = cursor.getInt(cursor.getColumnIndex(ID));
+        app.versionNumber = cursor.getInt(cursor.getColumnIndex(VERSION_NUMBER));
+        app.versionId = cursor.getInt(cursor.getColumnIndex(VERSION_ID));
+        app.supportEmails = cursor.getString(cursor.getColumnIndex(SUPPORT_EMAIL));
+        app.rating = cursor.getFloat(cursor.getColumnIndex(RATING));
+        app.promoUrl = cursor.getString(cursor.getColumnIndex(PROMO_URL));
+        app.packageName = cursor.getString(cursor.getColumnIndex(PACKAGENAME));
+        app.notificationEmails = cursor.getString(cursor.getColumnIndex(NOTIFICATION_EMAIL));
+        app.name = cursor.getString(cursor.getColumnIndex(NAME));
+        app.versionString = cursor.getString(cursor.getColumnIndex(VERSION_STRING));
+        app.iconUrl = cursor.getString(cursor.getColumnIndex(ICON_URL));
+        app.externalUrl = cursor.getString(cursor.getColumnIndex(EXTERNAL_URL));
+        app.externalBinary = cursor.getString(cursor.getColumnIndex(EXTERNAL_BINARY)).equalsIgnoreCase("true");
+        app.date = cursor.getString(cursor.getColumnIndex(DATE));
+        app.author = cursor.getString(cursor.getColumnIndex(AUTHOR));
+        app.allowed = cursor.getString(cursor.getColumnIndex(ALLOWED)).equalsIgnoreCase("true");
+
+        return app;
+    }
 
     //@SuppressLint("UseValueOf")
     private ContentValues setValues(App app) {
@@ -181,10 +176,10 @@ public class AppModel {
         values.put(VERSION_STRING, app.versionString);
         values.put(ICON_URL, app.iconUrl);
         values.put(EXTERNAL_URL, app.externalUrl);
-        values.put(EXTERNAL_BINARY, ""+app.externalBinary);
+        values.put(EXTERNAL_BINARY, "" + app.externalBinary);
         values.put(DATE, app.date);
         values.put(AUTHOR, app.author);
-        values.put(ALLOWED, ""+app.allowed);
+        values.put(ALLOWED, "" + app.allowed);
         values.put(CATEGORY_ID, Integer.parseInt(categoryId));
 
         return values;
@@ -265,7 +260,7 @@ public class AppModel {
         return getApps().isEmpty();
     }
 
-    public void setCategoryId(String categoryId){
+    public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
     }
 

@@ -35,10 +35,10 @@
 
     <!-- home -->
 
-    <string name="latest">LATEST</string>
+    <string name="latest">LATEST APPS</string>
     <string name="categories">CATEGORIES</string>
     <string name="myApps">MY APPS</string>
-    <string name="update_app_title">UPDATE</string>
+    <string name="update_app_title">UPDATE APPS</string>
 
 
     <!-- profile -->
@@ -104,4 +104,11 @@
     <string name="no_reviews">At this moment there are no reviews to show.</string>
     <string name="reconnecting">Reconnecting...</string>
     <string name="lost_session">Lost session</string>
+    <string name="need_pa_msg_dialog">The Personal Assistant application is needed to use the Market, download it now?</string>
+    <string name="need_pa_title_dialog">Required</string>
+    <string name="need_pa_ok_dialog">Ok</string>
+    <string name="need_pa_exit_dialog">Exit</string>
+    <string name="error_downloading_personal_assistant">Error downloading the Personal Assistant application.</string>
+    <string name="tap_again_to_exit">Press back again to exit</string>
+    <string name="logout">Logout</string>
 </resources>

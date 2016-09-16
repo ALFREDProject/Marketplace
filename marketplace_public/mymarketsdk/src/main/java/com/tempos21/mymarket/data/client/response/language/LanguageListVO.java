@@ -7,7 +7,7 @@ import java.util.List;
 
 public class LanguageListVO {
 
-  @Expose
-  @SerializedName("languageResponse")
-  public List<LanguageVO> languageVO;
+    @Expose
+    @SerializedName("languageResponse")
+    public List<LanguageVO> languageVO;
 }

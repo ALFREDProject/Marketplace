@@ -6,9 +6,9 @@ android {
 
     defaultConfig {
         applicationId "com.worldline.alfredo"
-        minSdkVersion 15
-        versionCode 20150807
-        versionName "1.0.5"
+        minSdkVersion 18
+        versionCode 22222250
+        versionName "1.0.250"
     }
 
     buildTypes {
@@ -29,14 +29,22 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.android.support:support-v4:22.0.0'
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.google.code.gson:gson:1.7.1'
     compile 'com.google.android.gms:play-services:7.5.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
     compile files('libs/jackson-core-lgpl-1.8.5.jar')
     compile files('libs/jackson-mapper-lgpl-1.8.5.jar')
     compile files('libs/t21c2dm_library-lib-v1.0.jar')
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
     compile project(':mymarketsdk')
+    compile 'eu.alfred.personalassistant.sharedlibrary:PersonalAssistantShared-debug@aar'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

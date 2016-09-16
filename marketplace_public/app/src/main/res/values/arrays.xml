@@ -8,6 +8,7 @@
         <item>medicine</item>
         <item>book</item>
         <item>plane</item>
+        <item>food</item>
     </string-array>
 
     <string-array name="categories_names">

@@ -4,5 +4,5 @@ import com.tempos21.mymarket.sdk.model.app.AppDetail;
 
 public class AppDetailResponse {
 
-  public AppDetail appDetail;
+    public AppDetail appDetail;
 }

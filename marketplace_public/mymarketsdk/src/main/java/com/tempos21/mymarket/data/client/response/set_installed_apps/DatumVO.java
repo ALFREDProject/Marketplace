@@ -4,37 +4,37 @@ import com.google.gson.annotations.Expose;
 
 public class DatumVO {
 
-  @Expose
-  private Integer id;
-  @Expose
-  private String result;
+    @Expose
+    private Integer id;
+    @Expose
+    private String result;
 
-  /**
-   * @return The id
-   */
-  public Integer getId() {
-    return id;
-  }
+    /**
+     * @return The id
+     */
+    public Integer getId() {
+        return id;
+    }
 
-  /**
-   * @param id The id
-   */
-  public void setId(Integer id) {
-    this.id = id;
-  }
+    /**
+     * @param id The id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  /**
-   * @return The result
-   */
-  public String getResult() {
-    return result;
-  }
+    /**
+     * @return The result
+     */
+    public String getResult() {
+        return result;
+    }
 
-  /**
-   * @param result The result
-   */
-  public void setResult(String result) {
-    this.result = result;
-  }
+    /**
+     * @param result The result
+     */
+    public void setResult(String result) {
+        this.result = result;
+    }
 
 }

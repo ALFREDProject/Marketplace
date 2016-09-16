@@ -7,8 +7,8 @@ import java.util.List;
 
 public class AppRateListVO {
 
-  @Expose
-  @SerializedName("appRateResponse")
-  public List<AppRateVO> appRateVO;
+    @Expose
+    @SerializedName("appRateResponse")
+    public List<AppRateVO> appRateVO;
 }
 

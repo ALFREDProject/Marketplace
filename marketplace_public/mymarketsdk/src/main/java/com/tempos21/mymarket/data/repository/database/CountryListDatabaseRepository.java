@@ -10,20 +10,20 @@ import java.util.List;
 
 public class CountryListDatabaseRepository extends AbstractRepository<Void, List<Country>> {
 
-  public CountryListDatabaseRepository(Context context) {
-    super(context);
-  }
+    public CountryListDatabaseRepository(Context context) {
+        super(context);
+    }
 
-  @Override
-  public List<Country> get(Void input) throws Exception {
-    CountryDAO dao = new CountryDAO(getContext());
-    return dao.getList();
-  }
+    @Override
+    public List<Country> get(Void input) throws Exception {
+        CountryDAO dao = new CountryDAO(getContext());
+        return dao.getList();
+    }
 
-  @Override
-  public void store(List<Country> output) throws Exception {
-    CountryDAO dao = new CountryDAO(getContext());
-    dao.clearAll();
-    dao.putList(output);
-  }
+    @Override
+    public void store(List<Country> output) throws Exception {
+        CountryDAO dao = new CountryDAO(getContext());
+        dao.clearAll();
+        dao.putList(output);
+    }
 }

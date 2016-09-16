@@ -6,5 +6,5 @@ import java.util.List;
 
 public class AppListResponse {
 
-  public List<App> appList;
+    public List<App> appList;
 }

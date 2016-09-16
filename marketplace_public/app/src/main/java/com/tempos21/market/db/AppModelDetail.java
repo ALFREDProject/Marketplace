@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.tempos21.market.util.Util;
-import com.tempos21.mymarket.sdk.MyMarket;
 import com.tempos21.mymarket.sdk.model.app.AppDetail;
 
 import java.util.ArrayList;
@@ -93,6 +92,28 @@ public class AppModelDetail {
         return apps;
     }
 
+    /**
+     * This method sets the Alfredo market apps installed in device
+     *
+     * @param apps all Alfredo market apps
+     */
+    public void setApps(List<AppDetail> apps) {
+        if (apps != null) {
+            DatabaseHelper dbHelper = new DatabaseHelper(context);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            db.delete(TABLE_NAME, null, null);
+
+            for (AppDetail app : apps) {
+                if (Util.isAppInstalled(context, app.packageName)) {
+                    app.versionNumber = Util.getVersion(context, app.packageName);
+                    ContentValues values = setValues(app);
+                    db.insert(TABLE_NAME, null, values);
+                }
+            }
+            db.close();
+            dbHelper.close();
+        }
+    }
 
     private AppDetail readCursor(Cursor cursor) {
         AppDetail app = new AppDetail();
@@ -118,31 +139,6 @@ public class AppModelDetail {
         return app;
     }
 
-
-    /**
-     * This method sets the Alfredo market apps installed in device
-     *
-     * @param apps all Alfredo market apps
-     */
-    public void setApps(List<AppDetail> apps) {
-        if (apps != null) {
-            DatabaseHelper dbHelper = new DatabaseHelper(context);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
-            db.delete(TABLE_NAME, null, null);
-
-            for (AppDetail app : apps) {
-                if (Util.isAppInstalled(context, app.packageName)) {
-                    app.versionNumber = Util.getVersion(context, app.packageName);
-                    ContentValues values = setValues(app);
-                    db.insert(TABLE_NAME, null, values);
-                }
-            }
-            db.close();
-            dbHelper.close();
-        }
-    }
-
-
     //@SuppressLint("UseValueOf")
     private ContentValues setValues(AppDetail app) {
         ContentValues values = new ContentValues();
@@ -158,10 +154,10 @@ public class AppModelDetail {
         values.put(VERSION_STRING, app.versionString);
         values.put(ICON_URL, app.iconUrl);
         values.put(EXTERNAL_URL, app.externalUrl);
-        values.put(EXTERNAL_BINARY, ""+app.externalBinary);
+        values.put(EXTERNAL_BINARY, "" + app.externalBinary);
         values.put(DATE, app.date);
         values.put(AUTHOR, app.author);
-        values.put(ALLOWED, ""+app.allowed);
+        values.put(ALLOWED, "" + app.allowed);
         values.put(SIZE, app.size);
         values.put(DESCRIPTION, app.description);
 

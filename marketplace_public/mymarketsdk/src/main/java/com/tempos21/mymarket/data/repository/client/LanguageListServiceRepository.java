@@ -14,28 +14,28 @@ import java.util.List;
 
 public class LanguageListServiceRepository extends AbstractRepository<Void, List<Language>> {
 
-  public LanguageListServiceRepository(Context context) {
-    super(context);
-  }
-
-  @Override
-  public List<Language> get(Void input) throws Exception {
-    try {
-      GetLanguageListClient client = new GetLanguageListClient(getContext());
-      ClientResponse<LanguageListVO> response = client.execute(null);
-      LanguageVOMapper mapper = new LanguageVOMapper();
-      return mapper.toModel(response.data.languageVO);
-    } catch (Exception e) {
-      if (MyMarket.getInstance().isDebug()) {
-        e.printStackTrace();
-      }
-      throw new Exception(e.getMessage());
-
+    public LanguageListServiceRepository(Context context) {
+        super(context);
     }
-  }
 
-  @Override
-  public void store(List<Language> output) throws Exception {
-    throw new UnsupportedOperationException();
-  }
+    @Override
+    public List<Language> get(Void input) throws Exception {
+        try {
+            GetLanguageListClient client = new GetLanguageListClient(getContext());
+            ClientResponse<LanguageListVO> response = client.execute(null);
+            LanguageVOMapper mapper = new LanguageVOMapper();
+            return mapper.toModel(response.data.languageVO);
+        } catch (Exception e) {
+            if (MyMarket.getInstance().isDebug()) {
+                e.printStackTrace();
+            }
+            throw new Exception(e.getMessage());
+
+        }
+    }
+
+    @Override
+    public void store(List<Language> output) throws Exception {
+        throw new UnsupportedOperationException();
+    }
 }

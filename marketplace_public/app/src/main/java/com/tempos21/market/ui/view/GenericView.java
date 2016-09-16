@@ -2,11 +2,11 @@ package com.tempos21.market.ui.view;
 
 public interface GenericView<S> {
 
-  void showProgress();
+    void showProgress();
 
-  void hideProgress();
+    void hideProgress();
 
-  void onViewSuccess(S list);
+    void onViewSuccess(S list);
 
-  void onViewError(long id, Exception e);
+    void onViewError(long id, Exception e);
 }

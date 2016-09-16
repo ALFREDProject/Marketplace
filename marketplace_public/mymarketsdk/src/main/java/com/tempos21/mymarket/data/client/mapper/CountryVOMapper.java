@@ -11,21 +11,22 @@ import java.lang.reflect.Type;
 
 public class CountryVOMapper extends BaseVOMapper<CountryVO, Country> {
 
-  public static ClientResponse<CountryData> mapResponse(String json) {
-    Type type = new TypeToken<ClientResponse<CountryData>>() {}.getType();
-    return new Gson().fromJson(json, type);
-  }
+    public static ClientResponse<CountryData> mapResponse(String json) {
+        Type type = new TypeToken<ClientResponse<CountryData>>() {
+        }.getType();
+        return new Gson().fromJson(json, type);
+    }
 
-  @Override
-  public Country toModel(CountryVO vo) {
-    Country country = new Country();
-    country.id = vo.id;
-    country.name = vo.name;
-    return country;
-  }
+    @Override
+    public CountryVO toVO(Country model) {
+        return null;
+    }
 
-  @Override
-  public CountryVO toVO(Country model) {
-    return null;
-  }
+    @Override
+    public Country toModel(CountryVO vo) {
+        Country country = new Country();
+        country.id = vo.id;
+        country.name = vo.name;
+        return country;
+    }
 }

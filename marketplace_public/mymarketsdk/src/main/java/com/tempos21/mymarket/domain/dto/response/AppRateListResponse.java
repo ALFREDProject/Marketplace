@@ -6,5 +6,5 @@ import java.util.List;
 
 public class AppRateListResponse {
 
-  public List<AppRate> appRateList;
+    public List<AppRate> appRateList;
 }

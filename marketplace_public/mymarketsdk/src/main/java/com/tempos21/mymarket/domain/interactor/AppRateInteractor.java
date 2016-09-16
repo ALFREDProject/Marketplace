@@ -11,21 +11,21 @@ import java.util.List;
 
 public class AppRateInteractor extends Interactor<AppRateListRequest, AppRateListResponse> {
 
-  public AppRateInteractor(Context context) {
-    super(context);
-  }
+    public AppRateInteractor(Context context) {
+        super(context);
+    }
 
-  @Override
-  protected AppRateListResponse perform(AppRateListRequest input) throws Exception {
-    return getAppRateList(input);
-  }
+    @Override
+    protected AppRateListResponse perform(AppRateListRequest input) throws Exception {
+        return getAppRateList(input);
+    }
 
-  private AppRateListResponse getAppRateList(AppRateListRequest input) throws Exception {
-    List<AppRate> appRateList;
-    AppRateListServiceRepository serviceRepository = new AppRateListServiceRepository(getContext());
-    AppRateListResponse mainResponse = new AppRateListResponse();
-    appRateList = serviceRepository.get(input);
-    mainResponse.appRateList = appRateList;
-    return mainResponse;
-  }
+    private AppRateListResponse getAppRateList(AppRateListRequest input) throws Exception {
+        List<AppRate> appRateList;
+        AppRateListServiceRepository serviceRepository = new AppRateListServiceRepository(getContext());
+        AppRateListResponse mainResponse = new AppRateListResponse();
+        appRateList = serviceRepository.get(input);
+        mainResponse.appRateList = appRateList;
+        return mainResponse;
+    }
 }

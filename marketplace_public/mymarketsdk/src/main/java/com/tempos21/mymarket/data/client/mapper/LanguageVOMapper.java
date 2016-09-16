@@ -11,21 +11,22 @@ import java.lang.reflect.Type;
 
 public class LanguageVOMapper extends BaseVOMapper<LanguageVO, Language> {
 
-  public static ClientResponse<LanguageListVO> mapResponse(String json) {
-    Type type = new TypeToken<ClientResponse<LanguageListVO>>() {}.getType();
-    return new Gson().fromJson(json, type);
-  }
+    public static ClientResponse<LanguageListVO> mapResponse(String json) {
+        Type type = new TypeToken<ClientResponse<LanguageListVO>>() {
+        }.getType();
+        return new Gson().fromJson(json, type);
+    }
 
-  @Override
-  public Language toModel(LanguageVO vo) {
-    Language language = new Language();
-    language.id = vo.id;
-    language.name = vo.name;
-    return language;
-  }
+    @Override
+    public LanguageVO toVO(Language model) {
+        return null;
+    }
 
-  @Override
-  public LanguageVO toVO(Language model) {
-    return null;
-  }
+    @Override
+    public Language toModel(LanguageVO vo) {
+        Language language = new Language();
+        language.id = vo.id;
+        language.name = vo.name;
+        return language;
+    }
 }

@@ -3,5 +3,5 @@
 
     <item android:drawable="@drawable/btn_apps_list_down" android:state_pressed="true"/>
     <item android:drawable="@drawable/btn_apps_list_up"/>
- 
+
 </selector>

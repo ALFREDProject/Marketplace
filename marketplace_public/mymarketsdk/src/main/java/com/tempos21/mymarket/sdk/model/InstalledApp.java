@@ -14,10 +14,10 @@ package com.tempos21.mymarket.sdk.model;
  */
 public class InstalledApp {
 
-  public static final String INSTALL = "I";
-  public static final String DELETE = "D";
+    public static final String INSTALL = "I";
+    public static final String DELETE = "D";
 
-  public long id;
-  public String type;
-  public int version;
+    public long id;
+    public String type;
+    public int version;
 }

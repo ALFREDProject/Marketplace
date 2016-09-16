@@ -12,19 +12,19 @@ import retrofit.client.Response;
 
 public class SetTokenClient extends Client<TokenRequest, ClientResponse<TokenVO>> {
 
-  public SetTokenClient(Context context) {
-    super(context);
-  }
-
-  @Override
-  protected ClientResponse<TokenVO> request(TokenRequest request) throws Exception {
-    MarketClientService service = MarketClientAdapter.getInstance(getContext()).getService();
-    Response serviceResponse = service.setToken(request.token);
-    ClientResponse<TokenVO> response = TokenVOMapper.mapResponse(Strings.convertStreamToString(serviceResponse.getBody().in(), "UTF-8"));
-    if ("OK".equals(response.status)) {
-      return response;
-    } else {
-      throw new Exception("Set Token fail");
+    public SetTokenClient(Context context) {
+        super(context);
     }
-  }
+
+    @Override
+    protected ClientResponse<TokenVO> request(TokenRequest request) throws Exception {
+        MarketClientService service = MarketClientAdapter.getInstance(getContext()).getService();
+        Response serviceResponse = service.setToken(request.token);
+        ClientResponse<TokenVO> response = TokenVOMapper.mapResponse(Strings.convertStreamToString(serviceResponse.getBody().in(), "UTF-8"));
+        if ("OK".equals(response.status)) {
+            return response;
+        } else {
+            throw new Exception("Set Token fail");
+        }
+    }
 }

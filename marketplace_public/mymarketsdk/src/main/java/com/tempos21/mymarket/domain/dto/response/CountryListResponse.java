@@ -6,5 +6,5 @@ import java.util.List;
 
 public class CountryListResponse {
 
-  public List<Country> countryList;
+    public List<Country> countryList;
 }

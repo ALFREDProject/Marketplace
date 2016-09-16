@@ -14,78 +14,78 @@ import io.realm.RealmResults;
 
 public class CategoryDAO extends BaseRealmDAO {
 
-  private final CategoryEntityMapper mapper;
+    private final CategoryEntityMapper mapper;
 
-  public CategoryDAO(Context context) {
-    super(context);
-    mapper = new CategoryEntityMapper(context);
-  }
-
-  public boolean put(Category category) {
-    try {
-      Realm realm = Realm.getInstance(getContext());
-      realm.beginTransaction();
-      realm.copyToRealmOrUpdate(mapper.toEntity(category));
-      realm.commitTransaction();
-      realm.close();
-      return true;
-    } catch (Exception e) {
-      e.printStackTrace();
-      return false;
+    public CategoryDAO(Context context) {
+        super(context);
+        mapper = new CategoryEntityMapper(context);
     }
-  }
 
-  public boolean putList(List<Category> categoryList) {
-    try {
-      Realm realm = Realm.getInstance(getContext());
-      realm.beginTransaction();
-      realm.copyToRealmOrUpdate(mapper.toEntity(categoryList));
-      realm.commitTransaction();
-      realm.close();
-      return true;
-    } catch (Exception e) {
-      e.printStackTrace();
-      return false;
+    public boolean put(Category category) {
+        try {
+            Realm realm = Realm.getInstance(getContext());
+            realm.beginTransaction();
+            realm.copyToRealmOrUpdate(mapper.toEntity(category));
+            realm.commitTransaction();
+            realm.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
-  }
 
-  public Category get(long id) {
-    Realm realm = Realm.getInstance(getContext());
-    CategoryEntity result = realm.where(CategoryEntity.class).equalTo("id", id).findFirst();
-    if (result != null) {
-      Category category = mapper.toModel(result);
-      realm.close();
-      return category;
-    } else {
-      realm.close();
-      return null;
+    public boolean putList(List<Category> categoryList) {
+        try {
+            Realm realm = Realm.getInstance(getContext());
+            realm.beginTransaction();
+            realm.copyToRealmOrUpdate(mapper.toEntity(categoryList));
+            realm.commitTransaction();
+            realm.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
-  }
 
-  public List<Category> getList() {
-    Realm realm = Realm.getInstance(getContext());
-    RealmResults<CategoryEntity> result = realm.where(CategoryEntity.class).findAll();
-    if (result != null) {
-      List<Category> list = mapper.toModel(result);
-      realm.close();
-      return list;
-    } else {
-      realm.close();
-      return new ArrayList<Category>();
+    public Category get(long id) {
+        Realm realm = Realm.getInstance(getContext());
+        CategoryEntity result = realm.where(CategoryEntity.class).equalTo("id", id).findFirst();
+        if (result != null) {
+            Category category = mapper.toModel(result);
+            realm.close();
+            return category;
+        } else {
+            realm.close();
+            return null;
+        }
     }
-  }
 
-  public boolean clearAll() {
-    try {
-      Realm realm = Realm.getInstance(getContext());
-      realm.beginTransaction();
-      realm.where(CategoryEntity.class).findAll().clear();
-      realm.commitTransaction();
-      realm.close();
-      return true;
-    } catch (Exception e) {
-      e.printStackTrace();
-      return false;
+    public List<Category> getList() {
+        Realm realm = Realm.getInstance(getContext());
+        RealmResults<CategoryEntity> result = realm.where(CategoryEntity.class).findAll();
+        if (result != null) {
+            List<Category> list = mapper.toModel(result);
+            realm.close();
+            return list;
+        } else {
+            realm.close();
+            return new ArrayList<Category>();
+        }
     }
-  }
+
+    public boolean clearAll() {
+        try {
+            Realm realm = Realm.getInstance(getContext());
+            realm.beginTransaction();
+            realm.where(CategoryEntity.class).findAll().clear();
+            realm.commitTransaction();
+            realm.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

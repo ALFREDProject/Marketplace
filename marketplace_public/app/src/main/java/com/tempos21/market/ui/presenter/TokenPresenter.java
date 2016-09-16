@@ -5,5 +5,5 @@ import com.tempos21.mymarket.domain.dto.request.TokenRequest;
 
 public interface TokenPresenter {
 
-  void setToken(TokenRequest tokenRequest);
+    void setToken(TokenRequest tokenRequest);
 }

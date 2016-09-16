@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="150dp" android:layout_height="250dp">
-    <ImageView android:id="@+id/screenshotImage" android:layout_width="225dp" android:layout_height="375dp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:scaleType="centerInside" />
-    <ProgressBar android:id="@+id/screenshotProgress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:indeterminate="true"
-        android:visibility="gone" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="150dp"
+                android:layout_height="250dp">
+
+    <ImageView
+        android:id="@+id/screenshotImage"
+        android:layout_width="225dp"
+        android:layout_height="375dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"/>
+
+    <ProgressBar
+        android:id="@+id/screenshotProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="true"
+        android:visibility="gone"/>
 </RelativeLayout>

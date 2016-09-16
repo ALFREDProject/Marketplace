@@ -4,15 +4,20 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-/** Size change listening TextView. */
+/**
+ * Size change listening TextView.
+ */
 public class SizeChangeNotifyingTextView extends TextView {
-    /** Listener. */
+    /**
+     * Listener.
+     */
     private OnSizeChangeListener m_listener;
 
     /**
      * Creates a new Layout-notifying TextView.
-     * @param context   Context.
-     * @param attrs     Attributes.
+     *
+     * @param context Context.
+     * @param attrs   Attributes.
      */
     public SizeChangeNotifyingTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -20,7 +25,8 @@ public class SizeChangeNotifyingTextView extends TextView {
 
     /**
      * Adds a size change listener.
-     * @param listener  Listener.
+     *
+     * @param listener Listener.
      */
     public void setOnSizeChangedListener(OnSizeChangeListener listener) {
         m_listener = listener;
@@ -33,8 +39,8 @@ public class SizeChangeNotifyingTextView extends TextView {
             m_listener.onSizeChanged(w, h, oldw, oldh);
         }
     }
-    
+
     public interface OnSizeChangeListener {
-    	public void onSizeChanged(int w, int h, int oldw, int oldh);
+        public void onSizeChanged(int w, int h, int oldw, int oldh);
     }
 }

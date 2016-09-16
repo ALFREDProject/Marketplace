@@ -5,31 +5,37 @@ import android.os.Parcelable;
 
 public class Os implements Parcelable {
 
-  public long id;
-  public String name;
-  public String extension;
+    public static final Parcelable.Creator<Os> CREATOR = new Parcelable.Creator<Os>() {
+        public Os createFromParcel(Parcel source) {
+            return new Os(source);
+        }
 
-  @Override
-  public int describeContents() { return 0; }
+        public Os[] newArray(int size) {
+            return new Os[size];
+        }
+    };
+    public long id;
+    public String name;
+    public String extension;
 
-  @Override
-  public void writeToParcel(Parcel dest, int flags) {
-    dest.writeLong(this.id);
-    dest.writeString(this.name);
-    dest.writeString(this.extension);
-  }
+    public Os() {
+    }
 
-  public Os() {}
+    protected Os(Parcel in) {
+        this.id = in.readLong();
+        this.name = in.readString();
+        this.extension = in.readString();
+    }
 
-  protected Os(Parcel in) {
-    this.id = in.readLong();
-    this.name = in.readString();
-    this.extension = in.readString();
-  }
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
-  public static final Parcelable.Creator<Os> CREATOR = new Parcelable.Creator<Os>() {
-    public Os createFromParcel(Parcel source) {return new Os(source);}
-
-    public Os[] newArray(int size) {return new Os[size];}
-  };
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeLong(this.id);
+        dest.writeString(this.name);
+        dest.writeString(this.extension);
+    }
 }
